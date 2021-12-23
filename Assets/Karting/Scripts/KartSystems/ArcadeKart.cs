@@ -314,7 +314,7 @@ namespace KartGame.KartSystems
             {
                 MoveVehicle(Input.Accelerate, Input.Brake, Input.TurnInput);
             }
-            GroundAirbourne();
+            //GroundAirbourne();
 
             m_PreviousGroundPercent = GroundPercent;
 

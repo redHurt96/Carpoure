@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GravityChanger : MonoBehaviour
+public class GravityChangerToDirection : MonoBehaviour
 {
     private const float GRAVITY_FORCE = 10;
 

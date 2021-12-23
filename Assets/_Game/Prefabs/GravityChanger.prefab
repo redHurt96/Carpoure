@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5813872338306616320}
   - component: {fileID: 5813872338306616335}
   - component: {fileID: 5813872338306616334}
-  - component: {fileID: 5813872338306616322}
+  - component: {fileID: 887911445}
   m_Layer: 0
   m_Name: GravityChanger
   m_TagString: Untagged
@@ -27,9 +27,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5813872338306616333}
-  m_LocalRotation: {x: -0, y: -0.22598332, z: -0, w: 0.97413117}
+  m_LocalRotation: {x: 0, y: -0.22597982, z: 0, w: 0.974132}
   m_LocalPosition: {x: -8.856144, y: -0.39544106, z: 6.4306717}
-  m_LocalScale: {x: 7.995743, y: 9.160076, z: 1.3431}
+  m_LocalScale: {x: 16.94058, y: 19.407454, z: 1.4353622}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -96,7 +96,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5813872338306616322
+--- !u!114 &887911445
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,4 +108,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85dcee78fcecc8f44a9e64b3c353c2f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetGravity: {x: -10, y: 0, z: 0}
+  _nextDirecton: 0

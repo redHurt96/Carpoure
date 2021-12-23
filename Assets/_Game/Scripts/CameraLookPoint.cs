@@ -12,6 +12,6 @@ public class CameraLookPoint : MonoBehaviour
 
     void Update()
     {
-        transform.position = new Vector3(_target.position.x, transform.position.y, _target.position.z + _offset);
+        transform.position = new Vector3(_target.position.x, _target.position.y, _target.position.z + _offset);
     }
 }
