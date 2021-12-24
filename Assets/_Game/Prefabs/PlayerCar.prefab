@@ -1665,6 +1665,7 @@ GameObject:
   - component: {fileID: 1471027976}
   - component: {fileID: 1471027982}
   - component: {fileID: 1471027981}
+  - component: {fileID: 7658504756061743118}
   m_Layer: 2
   m_Name: PlayerCar
   m_TagString: Player
@@ -1805,6 +1806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da06f6fb37ec8248822f5825f61bfad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rotationTreshhold: 0.2
 --- !u!114 &1471027976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1841,7 +1843,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60605f4d4c5f40b40ba2da96cd05be40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeBeforeAlign: 0.2
+  _timeBeforeAlign: 0.5
+--- !u!114 &7658504756061743118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7032843658353191263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3349ec9c042ec9641af35bb66d695cdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _kart: {fileID: 7032843658353191258}
 --- !u!1 &7032843658422184209
 GameObject:
   m_ObjectHideFlags: 0

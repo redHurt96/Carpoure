@@ -3,8 +3,9 @@ using UnityEngine;
 
 public class MobileInput : BaseInput
 {
-    private const float ROTATION_TRESHHOLD = .1f;
     private const float AUTO_ROTATION_TRESHHOLD = .02f;
+
+    [SerializeField] private float _rotationTreshhold = .1f;
 
     private float _localRotation => transform.localRotation.y;
     private bool _needRotateToOrigin => Mathf.Abs(_localRotation) > AUTO_ROTATION_TRESHHOLD;
@@ -35,5 +36,5 @@ public class MobileInput : BaseInput
     }
 
     private bool CanRotateAtDirection(float direction) =>
-        (direction > 0f && _localRotation < ROTATION_TRESHHOLD) || (direction < 0f && _localRotation > -ROTATION_TRESHHOLD);
+        (direction > 0f && _localRotation < _rotationTreshhold) || (direction < 0f && _localRotation > -_rotationTreshhold);
 }

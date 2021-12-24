@@ -3,15 +3,16 @@ using UnityEngine;
 public class CameraLookPoint : MonoBehaviour
 {
     [SerializeField] private Transform _target;
-    private float _offset;
+    [SerializeField] private float _offset;
 
-    private void Awake()
+    private void Update()
     {
-        _offset = transform.position.z - _target.position.z;
+        if (_target != null)
+            transform.position = new Vector3(_target.position.x, _target.position.y, _target.position.z + _offset);
     }
 
-    void Update()
+    public void AttachTarget(Transform target)
     {
-        transform.position = new Vector3(_target.position.x, _target.position.y, _target.position.z + _offset);
+        _target = target;
     }
 }

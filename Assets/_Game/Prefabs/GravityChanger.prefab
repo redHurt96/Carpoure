@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5813872338306616335}
   - component: {fileID: 5813872338306616334}
   - component: {fileID: 887911445}
+  - component: {fileID: 1338922889799932407}
   m_Layer: 0
   m_Name: GravityChanger
   m_TagString: Untagged
@@ -109,3 +110,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nextDirecton: 0
+--- !u!114 &1338922889799932407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5813872338306616333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aadfeb5128dc81047a809b81b9060477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
