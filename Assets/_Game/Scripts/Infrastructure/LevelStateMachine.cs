@@ -1,8 +1,11 @@
 using RH.Utilities.SingletonAccess;
+using System;
 using UnityEngine;
 
 public class LevelStateMachine : MonoBehaviourSingleton<LevelStateMachine>
 {
+    public event Action LevelRestarted;
+
     [SerializeField] private PlayerCar _carPrefab;
     [SerializeField] private CameraLookPoint _cameraLookPoint;
     [SerializeField] private Transform _startPoint;
@@ -44,6 +47,7 @@ public class LevelStateMachine : MonoBehaviourSingleton<LevelStateMachine>
 
     internal void RestartLevel()
     {
+        LevelRestarted?.Invoke();
         SwitchToStartState();
     }
 
