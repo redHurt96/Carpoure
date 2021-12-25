@@ -6,7 +6,7 @@ public class LevelStateMachine : MonoBehaviourSingleton<LevelStateMachine>
     [SerializeField] private PlayerCar _carPrefab;
     [SerializeField] private CameraLookPoint _cameraLookPoint;
     [SerializeField] private Transform _startPoint;
-
+    [SerializeField] private LevelCamera _levelCamera;
 
     [Header("UI")]
     [SerializeField] private GameObject _startUi;
@@ -14,7 +14,6 @@ public class LevelStateMachine : MonoBehaviourSingleton<LevelStateMachine>
     [SerializeField] private GameObject _failUi;
 
     private PlayerCar _car;
-
 
     private void Start()
     {
@@ -29,6 +28,7 @@ public class LevelStateMachine : MonoBehaviourSingleton<LevelStateMachine>
 
     internal void FinishLevel()
     {
+        _levelCamera.RotateAround(_car.transform);
         _finishUi.SetActive(true);
     }
 
@@ -39,20 +39,22 @@ public class LevelStateMachine : MonoBehaviourSingleton<LevelStateMachine>
 
     internal void GoToNextLevel()
     {
-        Destroy(_car.gameObject);
         SwitchToStartState();
     }
 
     internal void RestartLevel()
     {
-        Destroy(_car.gameObject);
         SwitchToStartState();
     }
 
     private void SwitchToStartState()
     {
+        if (_car != null)
+            Destroy(_car.gameObject);
+
         _car = Instantiate(_carPrefab, _startPoint.position, Quaternion.identity);
         _cameraLookPoint.AttachTarget(_car.transform);
+        _levelCamera.ResetToDefaultState();
 
         _startUi.SetActive(true);
         _finishUi.SetActive(false);
