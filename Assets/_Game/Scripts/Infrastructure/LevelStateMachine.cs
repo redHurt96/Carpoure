@@ -1,67 +1,84 @@
 using RH.Utilities.SingletonAccess;
+using Sirenix.OdinInspector;
 using System;
 using UnityEngine;
 
-public class LevelStateMachine : MonoBehaviourSingleton<LevelStateMachine>
+namespace RoofRace
 {
-    public event Action LevelRestarted;
-
-    [SerializeField] private PlayerCar _carPrefab;
-    [SerializeField] private CameraLookPoint _cameraLookPoint;
-    [SerializeField] private Transform _startPoint;
-    [SerializeField] private LevelCamera _levelCamera;
-
-    [Header("UI")]
-    [SerializeField] private GameObject _startUi;
-    [SerializeField] private GameObject _finishUi;
-    [SerializeField] private GameObject _failUi;
-
-    private PlayerCar _car;
-
-    private void Start()
+    public class LevelStateMachine : MonoBehaviourSingleton<LevelStateMachine>
     {
-        SwitchToStartState();
-    }
+        public event Action LevelRestarted;
 
-    internal void StartLevel()
-    {
-        _startUi.SetActive(false);
-        _car.Enable();
-    }
+        [SerializeField, AssetsOnly] private PlayerCar _carPrefab;
+        [SerializeField, AssetsOnly] private Level _levelPrefab;
+        [SerializeField] private CameraLookPoint _cameraLookPoint;
+        [SerializeField] private LevelCamera _levelCamera;
 
-    internal void FinishLevel()
-    {
-        _levelCamera.RotateAround(_car.transform);
-        _finishUi.SetActive(true);
-    }
+        [Header("UI")]
+        [SerializeField] private GameObject _startUi;
+        [SerializeField] private GameObject _finishUi;
+        [SerializeField] private GameObject _failUi;
 
-    internal void FailLevel()
-    {
-        _failUi.SetActive(true);
-    }
+        private Level _level;
+        private PlayerCar _car;
 
-    internal void GoToNextLevel()
-    {
-        SwitchToStartState();
-    }
+        private Vector3 _startPoint => _level.StartPoint.position;
 
-    internal void RestartLevel()
-    {
-        LevelRestarted?.Invoke();
-        SwitchToStartState();
-    }
+        private void Start()
+        {
+            SwitchToStartState();
+        }
 
-    private void SwitchToStartState()
-    {
-        if (_car != null)
-            Destroy(_car.gameObject);
+        internal void StartLevel()
+        {
+            _startUi.SetActive(false);
+            _car.Enable();
+        }
 
-        _car = Instantiate(_carPrefab, _startPoint.position, Quaternion.identity);
-        _cameraLookPoint.AttachTarget(_car.transform);
-        _levelCamera.ResetToDefaultState();
+        internal void FinishLevel()
+        {
+            _levelCamera.RotateAround(_car.transform);
+            _finishUi.SetActive(true);
+        }
 
-        _startUi.SetActive(true);
-        _finishUi.SetActive(false);
-        _failUi.SetActive(false);
+        internal void FailLevel()
+        {
+            _failUi.SetActive(true);
+        }
+
+        internal void GoToNextLevel()
+        {
+            SwitchToStartState();
+        }
+
+        internal void RestartLevel()
+        {
+            LevelRestarted?.Invoke();
+            SwitchToStartState();
+        }
+
+        private void SwitchToStartState()
+        {
+            CreateLevel();
+            CreateCar();
+
+            _cameraLookPoint.AttachTarget(_car.transform);
+            _levelCamera.ResetToDefaultState();
+
+            _startUi.SetActive(true);
+            _finishUi.SetActive(false);
+            _failUi.SetActive(false);
+        }
+
+        private void CreateLevel() => Create(_levelPrefab, ref _level, Vector3.zero);
+        private void CreateCar() => Create(_carPrefab, ref _car, _startPoint);
+
+        private void Create<T>(T prefab, ref T container, Vector3 atPosition) where T : Component
+        {
+            if (container != null)
+                Destroy(container.gameObject);
+
+            container = Instantiate(prefab, atPosition, Quaternion.identity);
+        }
     }
 }

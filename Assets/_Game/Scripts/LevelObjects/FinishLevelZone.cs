@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 
-public class FinishLevelZone : MonoBehaviour
+namespace RoofRace.LevelObjects
 {
-    private void OnTriggerEnter(Collider other)
+    public class FinishLevelZone : MonoBehaviour
     {
-        if (other.TryGetComponent<CarCollider>(out var carCollider))
-            LevelStateMachine.Instance.FinishLevel();
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.TryGetComponent<CarCollider>(out var carCollider))
+                LevelStateMachine.Instance.FinishLevel();
+        }
     }
 }

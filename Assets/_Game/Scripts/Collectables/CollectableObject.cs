@@ -1,17 +1,20 @@
 ﻿using UnityEngine;
 
-internal class CollectableObject : MonoBehaviour
+namespace RoofRace.Collectables
 {
-    public int Value => _value;
-
-    [SerializeField] private int _value = 1;
-
-    private void OnTriggerEnter(Collider other)
+    internal class CollectableObject : MonoBehaviour
     {
-        if (other.CompareTag(Tags.PLAYER))
+        public int Value => _value;
+
+        [SerializeField] private int _value = 1;
+
+        private void OnTriggerEnter(Collider other)
         {
-            CollectablesMaganer.Instance.AddItem(this);
-            Destroy(gameObject);
+            if (other.CompareTag(Tags.PLAYER))
+            {
+                CollectablesMaganer.Instance.AddItem(this);
+                Destroy(gameObject);
+            }
         }
     }
 }

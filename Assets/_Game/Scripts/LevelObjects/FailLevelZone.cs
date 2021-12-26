@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 
-public class FailLevelZone : MonoBehaviour
+namespace RoofRace.LevelObjects
 {
-    private void OnTriggerEnter(Collider other)
+    public class FailLevelZone : MonoBehaviour
     {
-        if (other.TryGetComponent<CarCollider>(out var carCollider))
-            LevelStateMachine.Instance.FailLevel();
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.TryGetComponent<CarCollider>(out var carCollider))
+                LevelStateMachine.Instance.FailLevel();
+        }
     }
 }

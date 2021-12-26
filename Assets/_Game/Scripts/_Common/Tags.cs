@@ -1,4 +1,7 @@
-public static class Tags
+namespace RoofRace
 {
-    public const string PLAYER = "Player";
+    public static class Tags
+    {
+        public const string PLAYER = "Player";
+    }
 }

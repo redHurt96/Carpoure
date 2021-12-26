@@ -1,7 +1,10 @@
 using RH.Utilities.UI;
 
-public class StartLevelButton : BaseActionButton
+namespace RoofRace.UI
 {
-    protected override void PerformOnClick() => 
-        LevelStateMachine.Instance.StartLevel();
+    public class StartLevelButton : BaseActionButton
+    {
+        protected override void PerformOnClick() =>
+            LevelStateMachine.Instance.StartLevel();
+    }
 }

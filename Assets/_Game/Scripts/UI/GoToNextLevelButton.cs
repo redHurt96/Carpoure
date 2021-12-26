@@ -1,7 +1,10 @@
 ﻿using RH.Utilities.UI;
 
-public class GoToNextLevelButton : BaseActionButton
+namespace RoofRace.UI
 {
-    protected override void PerformOnClick() =>
-        LevelStateMachine.Instance.GoToNextLevel();
+    public class GoToNextLevelButton : BaseActionButton
+    {
+        protected override void PerformOnClick() =>
+            LevelStateMachine.Instance.GoToNextLevel();
+    }
 }
