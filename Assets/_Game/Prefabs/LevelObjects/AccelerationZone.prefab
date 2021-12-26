@@ -115,7 +115,7 @@ MonoBehaviour:
       Acceleration: 70
       ReverseSpeed: 0
       ReverseAcceleration: 0
-      AccelerationCurve: 0
+      AccelerationCurve: 0.2
       Braking: 0
       CoastingDrag: 0
       Grip: 0
