@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 
-public class GravityChangerToValue : MonoBehaviour
+namespace RoofRace.LevelObjects
 {
-    [SerializeField] private Vector3 _nextDirecton;
-
-    private void OnTriggerEnter(Collider other)
+    public class GravityChangerToValue : MonoBehaviour
     {
-        if (other.CompareTag("Player"))
-            Physics.gravity = _nextDirecton;
+        [SerializeField] private Vector3 _nextDirecton;
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Player"))
+                UnityEngine.Physics.gravity = _nextDirecton;
+        }
     }
 }
