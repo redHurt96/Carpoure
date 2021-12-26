@@ -10,7 +10,7 @@ namespace RoofRace.LevelObjects
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Player"))
-                GravityChanger.Change(_nextDirecton);
+                Gravity.Change(_nextDirecton);
         }
     }
 }

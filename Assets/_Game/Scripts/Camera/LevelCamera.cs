@@ -6,16 +6,38 @@ public class LevelCamera : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera _followCamera;
     [SerializeField] private CinemachineVirtualCamera _flyCamera;
 
+    private CinemachineBasicMultiChannelPerlin _noise;
+
+    private void Start()
+    {
+        SetupShaking();
+        DisableShaking();
+    }
+
     public void RotateAround(Transform target)
     {
         _flyCamera.LookAt = target;
         SetPriorityToFlyCamera();
+        DisableShaking();
     }
 
     public void ResetToDefaultState()
     {
         SetPriorityToFollowCamera();
     }
+
+    public void EnableShaking()
+    {
+        _noise.enabled = true;
+    }
+
+    private void SetupShaking()
+    {
+        _noise = _followCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        _noise.m_AmplitudeGain = .3f;
+    }
+
+    private void DisableShaking() => _noise.enabled = false;
 
     private void SetPriorityToFlyCamera()
     {

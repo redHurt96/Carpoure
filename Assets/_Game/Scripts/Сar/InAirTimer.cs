@@ -1,22 +1,25 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(GroundedStateIndicator))]
-public class InAirTimer : MonoBehaviour
+namespace RoofRace.Car
 {
-    public float Value { get; private set; }
-
-    private GroundedStateIndicator _indicator;
-
-    private void Awake()
+    [RequireComponent(typeof(GroundedStateIndicator))]
+    public class InAirTimer : MonoBehaviour
     {
-        _indicator = GetComponent<GroundedStateIndicator>();
-    }
+        public float Value { get; private set; }
 
-    private void Update()
-    {
-        if (_indicator.IsGrounded)
-            Value = 0f;
-        else
-            Value += Time.deltaTime;
+        private GroundedStateIndicator _indicator;
+
+        private void Awake()
+        {
+            _indicator = GetComponent<GroundedStateIndicator>();
+        }
+
+        private void Update()
+        {
+            if (_indicator.IsGrounded)
+                Value = 0f;
+            else
+                Value += Time.deltaTime;
+        }
     }
 }

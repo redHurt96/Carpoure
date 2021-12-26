@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using RoofRace.Physics;
+using UnityEngine;
 
 namespace RoofRace.LevelObjects
 {
@@ -9,7 +10,7 @@ namespace RoofRace.LevelObjects
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Player"))
-                UnityEngine.Physics.gravity = _nextDirecton;
+                Gravity.Value = _nextDirecton;
         }
     }
 }

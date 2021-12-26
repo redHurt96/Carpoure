@@ -8,11 +8,13 @@ namespace RoofRace
     public class LevelStateMachine : MonoBehaviourSingleton<LevelStateMachine>
     {
         public event Action LevelRestarted;
+        public event Action LevelStarted;
 
         [SerializeField, AssetsOnly] private PlayerCar _carPrefab;
         [SerializeField, AssetsOnly] private Level _levelPrefab;
         [SerializeField] private CameraLookPoint _cameraLookPoint;
         [SerializeField] private LevelCamera _levelCamera;
+        [SerializeField] private GameObject _speedVfx;
 
         [Header("UI")]
         [SerializeField] private GameObject _startUi;
@@ -31,19 +33,25 @@ namespace RoofRace
 
         internal void StartLevel()
         {
+            LevelStarted?.Invoke();
+
             _startUi.SetActive(false);
             _car.Enable();
+            _levelCamera.EnableShaking();
+            _speedVfx.SetActive(true);
         }
 
         internal void FinishLevel()
         {
             _levelCamera.RotateAround(_car.transform);
             _finishUi.SetActive(true);
+            _speedVfx.SetActive(false);
         }
 
         internal void FailLevel()
         {
             _failUi.SetActive(true);
+            _speedVfx.SetActive(false);
         }
 
         internal void GoToNextLevel()
@@ -64,6 +72,7 @@ namespace RoofRace
 
             _cameraLookPoint.AttachTarget(_car.transform);
             _levelCamera.ResetToDefaultState();
+            _speedVfx.SetActive(false);
 
             _startUi.SetActive(true);
             _finishUi.SetActive(false);

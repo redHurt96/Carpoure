@@ -10,13 +10,13 @@ namespace RoofRace.LevelObjects
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Player"))
-                GravityChanger.Change(_insideDirecton);
+                Gravity.Change(_insideDirecton);
         }
 
         private void OnTriggerExit(Collider other)
         {
             if (other.CompareTag("Player"))
-                GravityChanger.Change(GravityDirection.Default);
+                Gravity.Change(GravityDirection.Default);
         }
     }
 }

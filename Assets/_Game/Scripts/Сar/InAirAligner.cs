@@ -1,26 +1,30 @@
+using RoofRace.Physics;
 using UnityEngine;
 
-[RequireComponent(typeof(InAirTimer))]
-public class InAirAligner : MonoBehaviour
+namespace RoofRace.Car
 {
-    [SerializeField] private float _timeBeforeAlign = .2f;
-
-    private InAirTimer _timer;
-    private bool _hasAligned;
-
-    private void Awake() => 
-        _timer = GetComponent<InAirTimer>();
-
-    private void Update()
+    [RequireComponent(typeof(InAirTimer))]
+    public class InAirAligner : MonoBehaviour
     {
-        if (_timer.Value > _timeBeforeAlign && !_hasAligned)
+        [SerializeField] private float _timeBeforeAlign = .2f;
+
+        private InAirTimer _timer;
+        private bool _hasAligned;
+
+        private void Awake() =>
+            _timer = GetComponent<InAirTimer>();
+
+        private void Update()
         {
-            transform.up = -Physics.gravity.normalized;
-            _hasAligned = true;
-        }
-        else if (_timer.Value < _timeBeforeAlign)
-        {
-            _hasAligned = false;
+            if (_timer.Value > _timeBeforeAlign && !_hasAligned)
+            {
+                transform.up = -Gravity.Value.normalized;
+                _hasAligned = true;
+            }
+            else if (_timer.Value < _timeBeforeAlign)
+            {
+                _hasAligned = false;
+            }
         }
     }
 }
