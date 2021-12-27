@@ -1,4 +1,5 @@
 using RH.Utilities.SingletonAccess;
+using RoofRace.Physics;
 using Sirenix.OdinInspector;
 using System;
 using UnityEngine;
@@ -46,6 +47,8 @@ namespace RoofRace
             _levelCamera.RotateAround(_car.transform);
             _finishUi.SetActive(true);
             _speedVfx.SetActive(false);
+
+            LevelTime.EnableSlowMotion();
         }
 
         internal void FailLevel()
@@ -77,6 +80,8 @@ namespace RoofRace
             _startUi.SetActive(true);
             _finishUi.SetActive(false);
             _failUi.SetActive(false);
+
+            LevelTime.ResetToDefault();
         }
 
         private void CreateLevel() => Create(_levelPrefab, ref _level, Vector3.zero);
