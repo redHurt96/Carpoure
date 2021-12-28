@@ -8,8 +8,10 @@ namespace RoofRace
 {
     public class LevelStateMachine : MonoBehaviourSingleton<LevelStateMachine>
     {
-        public event Action LevelRestarted;
         public event Action LevelStarted;
+        public event Action LevelRestarted;
+        public event Action LevelFinished;
+        public event Action LevelFailed;
 
         [SerializeField, AssetsOnly] private PlayerCar _carPrefab;
         [SerializeField, AssetsOnly] private Level _levelPrefab;
@@ -44,6 +46,8 @@ namespace RoofRace
 
         internal void FinishLevel()
         {
+            LevelFinished?.Invoke();
+
             _levelCamera.RotateAround(_car.transform);
             _finishUi.SetActive(true);
             _speedVfx.SetActive(false);
@@ -53,6 +57,8 @@ namespace RoofRace
 
         internal void FailLevel()
         {
+            LevelFailed?.Invoke();
+
             _failUi.SetActive(true);
             _speedVfx.SetActive(false);
         }
