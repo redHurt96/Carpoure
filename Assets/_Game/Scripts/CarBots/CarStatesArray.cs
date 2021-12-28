@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Sirenix.OdinInspector;
+using UnityEngine;
 
 namespace RoofRace.CarBots
 {
@@ -32,7 +33,7 @@ namespace RoofRace.CarBots
 
                     float timeLerp = (float)(currentSubstactedTime / nextSubstactedTime);
 
-                    newIndex = i - 1;
+                    newIndex = i;
 
                     return new CarState
                     {
@@ -40,11 +41,24 @@ namespace RoofRace.CarBots
                         Rotation = Quaternion.Lerp(previousState.Rotation, nextState.Rotation, timeLerp),
                         WheelsRotation = previousState.WheelsRotation
                     };
-                }       
+                }
             }
 
+            Debug.LogError($"There is no valid car state for time {timeSinceStart} and index {lastIndex}");
             newIndex = 100000000;
             return default;
+        }
+
+        [Button]
+        private void RemoveAllMiddlePoints()
+        {
+            var newArray = new CarState[]
+            {
+                _carStates[0],
+                _carStates[_carStates.Length - 1]
+            };
+
+            _carStates = newArray;
         }
     }
 }

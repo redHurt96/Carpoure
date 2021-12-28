@@ -59,7 +59,8 @@ namespace RoofRace.CarBots
         {
             if (_lastStateNumber < _statesArray.StatesCount)
             {
-                ApplyState(_statesArray.GetByTimeAndIndex(DateTime.Now.Subtract(_startTime).TotalMilliseconds, _lastStateNumber, out int newIndex));
+                double time = DateTime.Now.Subtract(_startTime).TotalMilliseconds;
+                ApplyState(_statesArray.GetByTimeAndIndex(time, _lastStateNumber, out int newIndex));
                 _lastStateNumber = newIndex;
             }
         }
