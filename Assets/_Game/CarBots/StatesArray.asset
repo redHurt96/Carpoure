@@ -12,1796 +12,647 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c20d77fb6d525e347b3b64579e1113cc, type: 3}
   m_Name: StatesArray
   m_EditorClassIdentifier: 
-  StartPosition: {x: -4.8, y: -2.2954412, z: -56.8}
+  StartPosition: {x: -5, y: -2.2954412, z: -57.1}
   _carStates:
   - HorizontalInput: 0
-    StartTime: 1.0002
-    FinishTime: 1581.4255
-  - HorizontalInput: -0.016661834
-    StartTime: 1581.4255
-    FinishTime: 1588.4259000000002
-  - HorizontalInput: -0.033263065
-    StartTime: 1588.4259000000002
-    FinishTime: 1595.4260000000002
-  - HorizontalInput: -0.05293558
-    StartTime: 1595.4260000000002
-    FinishTime: 1601.4266
-  - HorizontalInput: -0.07988194
-    StartTime: 1601.4266
-    FinishTime: 1607.4351000000001
-  - HorizontalInput: -0.10090354
-    StartTime: 1607.4351000000001
-    FinishTime: 1614.4257
-  - HorizontalInput: -0.13403794
-    StartTime: 1614.4257
-    FinishTime: 1620.4271
-  - HorizontalInput: -0.17206481
-    StartTime: 1620.4271
-    FinishTime: 1627.4292
-  - HorizontalInput: -0.21782811
-    StartTime: 1627.4292
-    FinishTime: 1633.4260000000002
-  - HorizontalInput: -0.2707632
-    StartTime: 1633.4260000000002
-    FinishTime: 1639.4261000000001
-  - HorizontalInput: -0.3091795
-    StartTime: 1639.4261000000001
-    FinishTime: 1646.4257
-  - HorizontalInput: -0.36520445
-    StartTime: 1646.4257
-    FinishTime: 1652.4260000000002
-  - HorizontalInput: -0.4357229
-    StartTime: 1652.4260000000002
-    FinishTime: 1659.4261000000001
-  - HorizontalInput: -0.5021597
-    StartTime: 1659.4261000000001
-    FinishTime: 1666.4256
-  - HorizontalInput: -0.5619512
-    StartTime: 1666.4256
-    FinishTime: 1672.4260000000002
-  - HorizontalInput: -0.6180609
-    StartTime: 1672.4260000000002
-    FinishTime: 1678.4267
-  - HorizontalInput: -0.6593686
-    StartTime: 1678.4267
-    FinishTime: 1685.4259000000002
-  - HorizontalInput: -0.69804126
-    StartTime: 1685.4259000000002
-    FinishTime: 1691.7232000000001
-  - HorizontalInput: -0.7361406
-    StartTime: 1691.7232000000001
-    FinishTime: 1698.4268000000002
-  - HorizontalInput: -0.76784784
-    StartTime: 1698.4268000000002
-    FinishTime: 1705.4265
-  - HorizontalInput: -0.7962171
-    StartTime: 1705.4265
-    FinishTime: 1711.4267
-  - HorizontalInput: -0.81879
-    StartTime: 1711.4267
-    FinishTime: 1717.4265
-  - HorizontalInput: -0.8392418
-    StartTime: 1717.4265
-    FinishTime: 1724.4259000000002
-  - HorizontalInput: -0.85722095
-    StartTime: 1724.4259000000002
-    FinishTime: 1730.4255
-  - HorizontalInput: -0.87413824
-    StartTime: 1730.4255
-    FinishTime: 1737.4263
-  - HorizontalInput: -0.8877469
-    StartTime: 1737.4263
-    FinishTime: 1742.4286000000002
-  - HorizontalInput: -0.89838296
-    StartTime: 1742.4286000000002
-    FinishTime: 1749.4262
-  - HorizontalInput: -0.90846074
-    StartTime: 1749.4262
-    FinishTime: 1755.4258
-  - HorizontalInput: -0.9191977
-    StartTime: 1755.4258
-    FinishTime: 1761.4259000000002
-  - HorizontalInput: -0.926692
-    StartTime: 1761.4259000000002
-    FinishTime: 1767.4258
-  - HorizontalInput: -0.93259585
-    StartTime: 1767.4258
-    FinishTime: 1772.4264
-  - HorizontalInput: -0.9384827
-    StartTime: 1772.4264
-    FinishTime: 1778.4264
-  - HorizontalInput: -0.9435632
-    StartTime: 1778.4264
-    FinishTime: 1784.4256
-  - HorizontalInput: -0.94788563
-    StartTime: 1784.4256
-    FinishTime: 1789.4272
-  - HorizontalInput: -0.9519261
-    StartTime: 1789.4272
-    FinishTime: 1795.4265
-  - HorizontalInput: -0.9553396
-    StartTime: 1795.4265
-    FinishTime: 1800.4264
-  - HorizontalInput: -0.9583433
-    StartTime: 1800.4264
-    FinishTime: 1806.4260000000002
-  - HorizontalInput: -0.9610396
-    StartTime: 1806.4260000000002
-    FinishTime: 1812.4260000000002
-  - HorizontalInput: -0.9636223
-    StartTime: 1812.4260000000002
-    FinishTime: 1817.4274
-  - HorizontalInput: -0.9657848
-    StartTime: 1817.4274
-    FinishTime: 1823.4267
-  - HorizontalInput: -0.9677197
-    StartTime: 1823.4267
-    FinishTime: 1829.4264
-  - HorizontalInput: -0.9694345
-    StartTime: 1829.4264
-    FinishTime: 1834.4271
-  - HorizontalInput: -0.9708627
-    StartTime: 1834.4271
-    FinishTime: 1839.4278000000002
-  - HorizontalInput: -0.9721307
-    StartTime: 1839.4278000000002
-    FinishTime: 1845.4268000000002
-  - HorizontalInput: -0.97333395
-    StartTime: 1845.4268000000002
-    FinishTime: 1851.4479000000001
-  - HorizontalInput: -0.9744744
-    StartTime: 1851.4479000000001
-    FinishTime: 1857.4467000000002
-  - HorizontalInput: -0.97542804
-    StartTime: 1857.4467000000002
-    FinishTime: 1862.4473
-  - HorizontalInput: -0.97626233
-    StartTime: 1862.4473
-    FinishTime: 1868.4918
-  - HorizontalInput: -0.97699887
-    StartTime: 1868.4918
-    FinishTime: 1874.4468000000002
-  - HorizontalInput: -0.97768253
-    StartTime: 1874.4468000000002
-    FinishTime: 1879.4579
-  - HorizontalInput: -0.9782713
-    StartTime: 1879.4579
-    FinishTime: 1885.4571
-  - HorizontalInput: -0.978757
-    StartTime: 1885.4571
-    FinishTime: 1890.4579
-  - HorizontalInput: -0.97923577
-    StartTime: 1890.4579
-    FinishTime: 1896.4597
-  - HorizontalInput: -0.9796327
-    StartTime: 1896.4597
-    FinishTime: 1901.458
-  - HorizontalInput: -0.97998583
-    StartTime: 1901.458
-    FinishTime: 1907.4569000000001
-  - HorizontalInput: -0.98030096
-    StartTime: 1907.4569000000001
-    FinishTime: 1913.4569000000001
-  - HorizontalInput: -0.98060447
-    StartTime: 1913.4569000000001
-    FinishTime: 1918.4586000000002
-  - HorizontalInput: -0.9808511
-    StartTime: 1918.4586000000002
-    FinishTime: 1924.4576000000002
-  - HorizontalInput: -0.9810681
-    StartTime: 1924.4576000000002
-    FinishTime: 1929.4584
-  - HorizontalInput: -0.9812784
-    StartTime: 1929.4584
-    FinishTime: 1935.5061
-  - HorizontalInput: -0.98144907
-    StartTime: 1935.5061
-    FinishTime: 1940.4582
-  - HorizontalInput: -0.9816018
-    StartTime: 1940.4582
-    FinishTime: 1946.4576000000002
-  - HorizontalInput: -0.9817412
-    StartTime: 1946.4576000000002
-    FinishTime: 1951.4585000000002
-  - HorizontalInput: -0.98187214
-    StartTime: 1951.4585000000002
-    FinishTime: 1957.4658000000002
-  - HorizontalInput: -0.981979
-    StartTime: 1957.4658000000002
-    FinishTime: 1962.4578000000001
-  - HorizontalInput: -0.98207843
-    StartTime: 1962.4578000000001
-    FinishTime: 1968.4902000000002
-  - HorizontalInput: -0.9821673
-    StartTime: 1968.4902000000002
-    FinishTime: 1974.4576000000002
-  - HorizontalInput: -0.9822499
-    StartTime: 1974.4576000000002
-    FinishTime: 1980.0396
-  - HorizontalInput: -0.9823201
-    StartTime: 1980.0396
-    FinishTime: 1985.0395
-  - HorizontalInput: -0.9823785
-    StartTime: 1985.0395
-    FinishTime: 1991.0408
-  - HorizontalInput: -0.98243964
-    StartTime: 1991.0408
-    FinishTime: 1997.0400000000002
-  - HorizontalInput: -0.98248714
-    StartTime: 1997.0400000000002
-    FinishTime: 2002.0414
-  - HorizontalInput: -0.9825291
-    StartTime: 2002.0414
-    FinishTime: 2008.0397
-  - HorizontalInput: -0.9825664
-    StartTime: 2008.0397
-    FinishTime: 2014.0405
-  - HorizontalInput: -0.98260313
-    StartTime: 2014.0405
-    FinishTime: 2020.0398
-  - HorizontalInput: -0.98223686
-    StartTime: 2020.0398
-    FinishTime: 2026.0400000000002
-  - HorizontalInput: -0.9819592
-    StartTime: 2026.0400000000002
-    FinishTime: 2031.8407000000002
-  - HorizontalInput: -0.98170674
-    StartTime: 2031.8407000000002
-    FinishTime: 2036.8396
-  - HorizontalInput: -0.9814944
-    StartTime: 2036.8396
-    FinishTime: 2042.8376
-  - HorizontalInput: -0.9813104
-    StartTime: 2042.8376
-    FinishTime: 2048.8375
-  - HorizontalInput: -0.9811477
-    StartTime: 2048.8375
-    FinishTime: 2053.8389
-  - HorizontalInput: -0.98099315
-    StartTime: 2053.8389
-    FinishTime: 2058.8382
-  - HorizontalInput: -0.9808672
-    StartTime: 2058.8382
-    FinishTime: 2064.838
-  - HorizontalInput: -0.980753
-    StartTime: 2064.838
-    FinishTime: 2070.8377
-  - HorizontalInput: -0.98064137
-    StartTime: 2070.8377
-    FinishTime: 2075.838
-  - HorizontalInput: -0.9805472
-    StartTime: 2075.838
-    FinishTime: 2081.9108
-  - HorizontalInput: -0.9804662
-    StartTime: 2081.9108
-    FinishTime: 2087.8374
-  - HorizontalInput: -0.9803913
-    StartTime: 2087.8374
-    FinishTime: 2092.8382
-  - HorizontalInput: -0.980322
-    StartTime: 2092.8382
-    FinishTime: 2098.8520000000003
-  - HorizontalInput: -0.98026645
-    StartTime: 2098.8520000000003
-    FinishTime: 2103.8377
-  - HorizontalInput: -0.98021543
-    StartTime: 2103.8377
-    FinishTime: 2110.8384
-  - HorizontalInput: -0.8481334
-    StartTime: 2110.8384
-    FinishTime: 2116.8391
-  - HorizontalInput: -0.7405121
-    StartTime: 2116.8391
-    FinishTime: 2122.8399
-  - HorizontalInput: -0.6539936
-    StartTime: 2122.8399
-    FinishTime: 2128.8282
-  - HorizontalInput: -0.5769937
-    StartTime: 2128.8282
-    FinishTime: 2134.8271
-  - HorizontalInput: -0.5104317
-    StartTime: 2134.8271
-    FinishTime: 2140.8271
-  - HorizontalInput: -0.45051825
-    StartTime: 2140.8271
-    FinishTime: 2146.8268000000003
-  - HorizontalInput: -0.39833564
-    StartTime: 2146.8268000000003
-    FinishTime: 2152.8269
-  - HorizontalInput: -0.34720367
-    StartTime: 2152.8269
-    FinishTime: 2157.8273
-  - HorizontalInput: -0.30875018
-    StartTime: 2157.8273
-    FinishTime: 2164.826
-  - HorizontalInput: -0.2712352
-    StartTime: 2164.826
-    FinishTime: 2170.8298
-  - HorizontalInput: -0.23668851
-    StartTime: 2170.8298
-    FinishTime: 2176.8263
-  - HorizontalInput: -0.20855051
-    StartTime: 2176.8263
-    FinishTime: 2181.8287
-  - HorizontalInput: -0.18509191
-    StartTime: 2181.8287
-    FinishTime: 2188.8272
-  - HorizontalInput: -0.16298084
-    StartTime: 2188.8272
-    FinishTime: 2193.8275000000003
-  - HorizontalInput: -0.14328265
-    StartTime: 2193.8275000000003
-    FinishTime: 2199.8269
-  - HorizontalInput: -0.12724847
-    StartTime: 2199.8269
-    FinishTime: 2205.8279
-  - HorizontalInput: -0.113150865
-    StartTime: 2205.8279
-    FinishTime: 2211.837
-  - HorizontalInput: -0.099174924
-    StartTime: 2211.837
-    FinishTime: 2216.8272
-  - HorizontalInput: -0.0886243
-    StartTime: 2216.8272
-    FinishTime: 2221.8281
-  - HorizontalInput: -0.07895769
-    StartTime: 2221.8281
-    FinishTime: 2228.8268000000003
-  - HorizontalInput: -0.06987093
-    StartTime: 2228.8268000000003
-    FinishTime: 2233.8277000000003
-  - HorizontalInput: -0.061778896
-    StartTime: 2233.8277000000003
-    FinishTime: 2238.8285
-  - HorizontalInput: -0.055159535
-    StartTime: 2238.8285
-    FinishTime: 2244.8268000000003
-  - HorizontalInput: -0.04906165
-    StartTime: 2244.8268000000003
-    FinishTime: 2250.8264
-  - HorizontalInput: -0.043398757
-    StartTime: 2250.8264
-    FinishTime: 2255.8275000000003
-  - HorizontalInput: -0.03869216
-    StartTime: 2255.8275000000003
-    FinishTime: 2261.8275000000003
-  - HorizontalInput: -0.034223914
-    StartTime: 2261.8275000000003
-    FinishTime: 2267.8267
-  - HorizontalInput: -0.03043608
-    StartTime: 2267.8267
-    FinishTime: 2272.8271
-  - HorizontalInput: -0.026805177
-    StartTime: 2272.8271
-    FinishTime: 2278.8271
+    StartTime: 16.1753
+    FinishTime: 1462.3586
+  - HorizontalInput: -0.060089882
+    StartTime: 1462.3586
+    FinishTime: 1478.9229
+  - HorizontalInput: -0.1296854
+    StartTime: 1478.9229
+    FinishTime: 1496.0092
+  - HorizontalInput: -0.2232602
+    StartTime: 1496.0092
+    FinishTime: 1512.0097
+  - HorizontalInput: -0.30539536
+    StartTime: 1512.0097
+    FinishTime: 1529.3604
+  - HorizontalInput: -0.47116518
+    StartTime: 1529.3604
+    FinishTime: 1563.2531000000001
+  - HorizontalInput: -0.7554619
+    StartTime: 1563.2531000000001
+    FinishTime: 1579.7728000000002
+  - HorizontalInput: -0.83211356
+    StartTime: 1579.7728000000002
+    FinishTime: 1596.7732
+  - HorizontalInput: -0.890705
+    StartTime: 1596.7732
+    FinishTime: 1614.0125
+  - HorizontalInput: -0.92593265
+    StartTime: 1614.0125
+    FinishTime: 1631.3946
+  - HorizontalInput: -0.948305
+    StartTime: 1631.3946
+    FinishTime: 1664.6767
+  - HorizontalInput: -0.9748352
+    StartTime: 1664.6767
+    FinishTime: 1681.5701000000001
+  - HorizontalInput: -0.98184687
+    StartTime: 1681.5701000000001
+    FinishTime: 1698.4257
+  - HorizontalInput: -0.98650646
+    StartTime: 1698.4257
+    FinishTime: 1715.4253
+  - HorizontalInput: -0.98969585
+    StartTime: 1715.4253
+    FinishTime: 1732.0566000000001
+  - HorizontalInput: -0.99158156
+    StartTime: 1732.0566000000001
+    FinishTime: 1749.3279
+  - HorizontalInput: -0.9930106
+    StartTime: 1749.3279
+    FinishTime: 1783.1263000000001
+  - HorizontalInput: -0.99449134
+    StartTime: 1783.1263000000001
+    FinishTime: 1800.5161
+  - HorizontalInput: -0.99485254
+    StartTime: 1800.5161
+    FinishTime: 1817.327
+  - HorizontalInput: -0.99512464
+    StartTime: 1817.327
+    FinishTime: 1834.3272000000002
+  - HorizontalInput: -0.995298
+    StartTime: 1834.3272000000002
+    FinishTime: 1851.6618
+  - HorizontalInput: -0.9954134
+    StartTime: 1851.6618
+    FinishTime: 1867.6616000000001
+  - HorizontalInput: -0.9954882
+    StartTime: 1867.6616000000001
+    FinishTime: 1901.7958
+  - HorizontalInput: -0.41710448
+    StartTime: 1901.7958
+    FinishTime: 1918.7969
+  - HorizontalInput: -0.29357898
+    StartTime: 1918.7969
+    FinishTime: 1934.7108
+  - HorizontalInput: -0.19202648
+    StartTime: 1934.7108
+    FinishTime: 1952.0786
+  - HorizontalInput: -0.12565637
+    StartTime: 1952.0786
+    FinishTime: 1969.0132
+  - HorizontalInput: -0.08456573
+    StartTime: 1969.0132
+    FinishTime: 2002.0091
+  - HorizontalInput: -0.036997966
+    StartTime: 2002.0091
+    FinishTime: 2018.4001
   - HorizontalInput: 1
-    StartTime: 2278.8271
-    FinishTime: 2718.6575000000003
+    StartTime: 2018.4001
+    FinishTime: 2354.7846
   - HorizontalInput: 0
-    StartTime: 2718.6575000000003
-    FinishTime: 4578.1965
-  - HorizontalInput: -0.028523223
-    StartTime: 4578.1965
-    FinishTime: 4584.7724
-  - HorizontalInput: -0.08309579
-    StartTime: 4584.7724
-    FinishTime: 4590.7733
-  - HorizontalInput: -0.1273193
-    StartTime: 4590.7733
-    FinishTime: 4597.8054
-  - HorizontalInput: -0.19163601
-    StartTime: 4597.8054
-    FinishTime: 4604.8043
-  - HorizontalInput: -0.26092014
-    StartTime: 4604.8043
-    FinishTime: 4610.9154
-  - HorizontalInput: -0.34451696
-    StartTime: 4610.9154
-    FinishTime: 4617.8057
-  - HorizontalInput: -0.42406648
-    StartTime: 4617.8057
-    FinishTime: 4622.8054
-  - HorizontalInput: -0.483895
-    StartTime: 4622.8054
-    FinishTime: 4628.8054
-  - HorizontalInput: -0.5457615
-    StartTime: 4628.8054
-    FinishTime: 4635.8053
-  - HorizontalInput: -0.6092358
-    StartTime: 4635.8053
-    FinishTime: 4641.8045
-  - HorizontalInput: -0.6577811
-    StartTime: 4641.8045
-    FinishTime: 4648.8046
-  - HorizontalInput: -0.69997895
-    StartTime: 4648.8046
-    FinishTime: 4653.8052
-  - HorizontalInput: -0.73454803
-    StartTime: 4653.8052
-    FinishTime: 4659.805
-  - HorizontalInput: -0.76388204
-    StartTime: 4659.805
-    FinishTime: 4666.8053
-  - HorizontalInput: -0.79376036
-    StartTime: 4666.8053
-    FinishTime: 4671.8046
-  - HorizontalInput: -0.81871474
-    StartTime: 4671.8046
-    FinishTime: 4677.804700000001
-  - HorizontalInput: -0.83919734
-    StartTime: 4677.804700000001
-    FinishTime: 4684.8048
-  - HorizontalInput: -0.8610206
-    StartTime: 4684.8048
-    FinishTime: 4690.8039
-  - HorizontalInput: -0.8786872
-    StartTime: 4690.8039
-    FinishTime: 4697.8048
-  - HorizontalInput: -0.89485544
-    StartTime: 4697.8048
-    FinishTime: 4702.8052
-  - HorizontalInput: -0.9064492
-    StartTime: 4702.8052
-    FinishTime: 4709.8041
-  - HorizontalInput: -0.9182504
-    StartTime: 4709.8041
-    FinishTime: 4715.8045
-  - HorizontalInput: -0.9285063
-    StartTime: 4715.8045
-    FinishTime: 4720.8048
-  - HorizontalInput: -0.93612194
-    StartTime: 4720.8048
-    FinishTime: 4727.677000000001
-  - HorizontalInput: -0.94339395
-    StartTime: 4727.677000000001
-    FinishTime: 4733.8044
-  - HorizontalInput: -0.9510434
-    StartTime: 4733.8044
-    FinishTime: 4739.8051000000005
-  - HorizontalInput: -0.95673674
-    StartTime: 4739.8051000000005
-    FinishTime: 4745.8048
-  - HorizontalInput: -0.96144134
-    StartTime: 4745.8048
-    FinishTime: 4750.8046
-  - HorizontalInput: -0.96616864
-    StartTime: 4750.8046
-    FinishTime: 4756.8048
-  - HorizontalInput: -0.9697797
-    StartTime: 4756.8048
-    FinishTime: 4762.8059
-  - HorizontalInput: -0.97336626
-    StartTime: 4762.8059
-    FinishTime: 4768.8048
-  - HorizontalInput: -0.97617716
-    StartTime: 4768.8048
-    FinishTime: 4773.8051000000005
-  - HorizontalInput: -0.9789565
-    StartTime: 4773.8051000000005
-    FinishTime: 4779.8053
-  - HorizontalInput: -0.98113596
-    StartTime: 4779.8053
-    FinishTime: 4784.8048
-  - HorizontalInput: -0.9831594
-    StartTime: 4784.8048
-    FinishTime: 4790.805
-  - HorizontalInput: -0.9849796
-    StartTime: 4790.805
-    FinishTime: 4796.804
-  - HorizontalInput: -0.9867182
-    StartTime: 4796.804
-    FinishTime: 4801.8051000000005
-  - HorizontalInput: -0.98818254
-    StartTime: 4801.8051000000005
-    FinishTime: 4807.8048
-  - HorizontalInput: -0.98944366
-    StartTime: 4807.8048
-    FinishTime: 4813.8051000000005
-  - HorizontalInput: -0.9906125
-    StartTime: 4813.8051000000005
-    FinishTime: 4818.8048
-  - HorizontalInput: -0.99161047
-    StartTime: 4818.8048
-    FinishTime: 4824.804700000001
-  - HorizontalInput: -0.9924342
-    StartTime: 4824.804700000001
-    FinishTime: 4830.8045
-  - HorizontalInput: -0.9933304
-    StartTime: 4830.8045
-    FinishTime: 4835.805
-  - HorizontalInput: -0.99401057
-    StartTime: 4835.805
-    FinishTime: 4841.8049
-  - HorizontalInput: -0.99461496
-    StartTime: 4841.8049
-    FinishTime: 4847.8060000000005
-  - HorizontalInput: -0.99516225
-    StartTime: 4847.8060000000005
-    FinishTime: 4852.804700000001
-  - HorizontalInput: -0.99566984
-    StartTime: 4852.804700000001
-    FinishTime: 4858.8049
-  - HorizontalInput: -0.9960926
-    StartTime: 4858.8049
-    FinishTime: 4864.8042000000005
-  - HorizontalInput: -0.9964815
-    StartTime: 4864.8042000000005
-    FinishTime: 4869.805600000001
-  - HorizontalInput: -0.99684954
-    StartTime: 4869.805600000001
-    FinishTime: 4875.804700000001
-  - HorizontalInput: -0.9971243
-    StartTime: 4875.804700000001
-    FinishTime: 4880.8059
-  - HorizontalInput: -0.9973982
-    StartTime: 4880.8059
-    FinishTime: 4886.8051000000005
-  - HorizontalInput: -0.9976215
-    StartTime: 4886.8051000000005
-    FinishTime: 4892.8045
-  - HorizontalInput: -0.9978471
-    StartTime: 4892.8045
-    FinishTime: 4898.8054
-  - HorizontalInput: -0.9980425
-    StartTime: 4898.8054
-    FinishTime: 4903.8052
-  - HorizontalInput: -0.9981973
-    StartTime: 4903.8052
-    FinishTime: 4909.8042000000005
-  - HorizontalInput: -0.99835134
-    StartTime: 4909.8042000000005
-    FinishTime: 4914.8049
-  - HorizontalInput: -0.998484
-    StartTime: 4914.8049
-    FinishTime: 4920.8060000000005
-  - HorizontalInput: -0.9986027
-    StartTime: 4920.8060000000005
-    FinishTime: 4926.8043
-  - HorizontalInput: -0.9987035
-    StartTime: 4926.8043
-    FinishTime: 4932.805600000001
-  - HorizontalInput: -0.99880457
-    StartTime: 4932.805600000001
-    FinishTime: 4938.8042000000005
-  - HorizontalInput: -0.9988856
-    StartTime: 4938.8042000000005
-    FinishTime: 4943.805
-  - HorizontalInput: -0.9989545
-    StartTime: 4943.805
-    FinishTime: 4949.804700000001
-  - HorizontalInput: -0.9990184
-    StartTime: 4949.804700000001
-    FinishTime: 4955.8615
-  - HorizontalInput: -0.9990752
-    StartTime: 4955.8615
-    FinishTime: 4960.8059
-  - HorizontalInput: -0.9991239
-    StartTime: 4960.8059
-    FinishTime: 4966.8052
-  - HorizontalInput: -0.9991654
-    StartTime: 4966.8052
-    FinishTime: 4971.8051000000005
-  - HorizontalInput: -0.9992043
-    StartTime: 4971.8051000000005
-    FinishTime: 4977.8051000000005
-  - HorizontalInput: -0.9992379
-    StartTime: 4977.8051000000005
-    FinishTime: 4982.8052
-  - HorizontalInput: -0.9992672
-    StartTime: 4982.8052
-    FinishTime: 4988.8046
-  - HorizontalInput: -0.99929327
-    StartTime: 4988.8046
-    FinishTime: 4994.8055
-  - HorizontalInput: -0.9993203
-    StartTime: 4994.8055
-    FinishTime: 4999.8052
-  - HorizontalInput: -0.99934334
-    StartTime: 4999.8052
-    FinishTime: 5005.8889
-  - HorizontalInput: -0.9993612
-    StartTime: 5005.8889
-    FinishTime: 5011.8052
-  - HorizontalInput: -0.9993804
-    StartTime: 5011.8052
-    FinishTime: 5017.8049
-  - HorizontalInput: -0.99939555
-    StartTime: 5017.8049
-    FinishTime: 5023.8045
-  - HorizontalInput: -0.9994087
-    StartTime: 5023.8045
-    FinishTime: 5029.805
-  - HorizontalInput: -0.99942124
-    StartTime: 5029.805
-    FinishTime: 5034.8051000000005
-  - HorizontalInput: -0.99943066
-    StartTime: 5034.8051000000005
-    FinishTime: 5039.8053
-  - HorizontalInput: -0.9994392
-    StartTime: 5039.8053
-    FinishTime: 5045.805
-  - HorizontalInput: -0.9994468
-    StartTime: 5045.805
-    FinishTime: 5050.8048
-  - HorizontalInput: -0.9994548
-    StartTime: 5050.8048
-    FinishTime: 5056.804700000001
-  - HorizontalInput: -0.9994609
-    StartTime: 5056.804700000001
-    FinishTime: 5061.8044
-  - HorizontalInput: -0.9994667
-    StartTime: 5061.8044
-    FinishTime: 5067.8053
-  - HorizontalInput: -0.9994718
-    StartTime: 5067.8053
-    FinishTime: 5073.805200000001
-  - HorizontalInput: -0.9994767
-    StartTime: 5073.805200000001
-    FinishTime: 5078.806100000001
-  - HorizontalInput: -0.9994805
-    StartTime: 5078.806100000001
-    FinishTime: 5085.804300000001
-  - HorizontalInput: -0.9994841
-    StartTime: 5085.804300000001
-    FinishTime: 5090.8046
+    StartTime: 2354.7846
+    FinishTime: 4696.718
+  - HorizontalInput: -0.0761352
+    StartTime: 4696.718
+    FinishTime: 4713.7176
+  - HorizontalInput: -0.2677733
+    StartTime: 4713.7176
+    FinishTime: 4730.7176
+  - HorizontalInput: -0.48288968
+    StartTime: 4730.7176
+    FinishTime: 4763.7178
+  - HorizontalInput: -0.76892847
+    StartTime: 4763.7178
+    FinishTime: 4780.718
+  - HorizontalInput: -0.8452467
+    StartTime: 4780.718
+    FinishTime: 4797.7174
+  - HorizontalInput: -0.8994152
+    StartTime: 4797.7174
+    FinishTime: 4814.7174
+  - HorizontalInput: -0.9306344
+    StartTime: 4814.7174
+    FinishTime: 4831.718
+  - HorizontalInput: -0.95348054
+    StartTime: 4831.718
+    FinishTime: 4848.718
+  - HorizontalInput: -0.96924627
+    StartTime: 4848.718
+    FinishTime: 4881.7178
+  - HorizontalInput: -0.98646635
+    StartTime: 4881.7178
+    FinishTime: 4898.717900000001
+  - HorizontalInput: -0.9907035
+    StartTime: 4898.717900000001
+    FinishTime: 4915.1396
+  - HorizontalInput: -0.99384534
+    StartTime: 4915.1396
+    FinishTime: 4932.1395
+  - HorizontalInput: -0.99574083
+    StartTime: 4932.1395
+    FinishTime: 4949.1394
+  - HorizontalInput: -0.99704814
+    StartTime: 4949.1394
+    FinishTime: 4982.139
+  - HorizontalInput: -0.99849886
+    StartTime: 4982.139
+    FinishTime: 4999.1385
+  - HorizontalInput: -0.9988787
+    StartTime: 4999.1385
+    FinishTime: 5016.1392000000005
+  - HorizontalInput: -0.999145
+    StartTime: 5016.1392000000005
+    FinishTime: 5032.138800000001
+  - HorizontalInput: -0.99931633
+    StartTime: 5032.138800000001
+    FinishTime: 5049.138800000001
+  - HorizontalInput: -0.999431
+    StartTime: 5049.138800000001
+    FinishTime: 5082.1392000000005
+  - HorizontalInput: -0.9995544
+    StartTime: 5082.1392000000005
+    FinishTime: 5099.138800000001
+  - HorizontalInput: -0.9995861
+    StartTime: 5099.138800000001
+    FinishTime: 5116.1398
+  - HorizontalInput: -0.99960905
+    StartTime: 5116.1398
+    FinishTime: 5133.139
+  - HorizontalInput: -0.99962443
+    StartTime: 5133.139
+    FinishTime: 5150.1391
+  - HorizontalInput: -0.999634
+    StartTime: 5150.1391
+    FinishTime: 5184.138800000001
+  - HorizontalInput: -0.9996453
+    StartTime: 5184.138800000001
+    FinishTime: 5200.138800000001
+  - HorizontalInput: -0.9996483
+    StartTime: 5200.138800000001
+    FinishTime: 5217.138800000001
+  - HorizontalInput: -0.99965024
+    StartTime: 5217.138800000001
+    FinishTime: 5234.139
   - HorizontalInput: 0
-    StartTime: 5090.8046
-    FinishTime: 5262.8054
-  - HorizontalInput: -0.67674345
-    StartTime: 5262.8054
-    FinishTime: 5268.804700000001
-  - HorizontalInput: -0.60204995
-    StartTime: 5268.804700000001
-    FinishTime: 5274.8141000000005
-  - HorizontalInput: -0.52942705
-    StartTime: 5274.8141000000005
-    FinishTime: 5280.805
-  - HorizontalInput: -0.46618488
-    StartTime: 5280.805
-    FinishTime: 5286.805200000001
-  - HorizontalInput: -0.41396937
-    StartTime: 5286.805200000001
-    FinishTime: 5291.8060000000005
-  - HorizontalInput: -0.36337155
-    StartTime: 5291.8060000000005
-    FinishTime: 5297.8053
-  - HorizontalInput: -0.32108963
-    StartTime: 5297.8053
-    FinishTime: 5304.8049
-  - HorizontalInput: -0.28473842
-    StartTime: 5304.8049
-    FinishTime: 5309.8059
-  - HorizontalInput: -0.24807665
-    StartTime: 5309.8059
-    FinishTime: 5315.8049
-  - HorizontalInput: -0.21931067
-    StartTime: 5315.8049
-    FinishTime: 5321.8067
-  - HorizontalInput: -0.19353421
-    StartTime: 5321.8067
-    FinishTime: 5328.1576000000005
-  - HorizontalInput: -0.17170975
-    StartTime: 5328.1576000000005
-    FinishTime: 5333.8051000000005
-  - HorizontalInput: -0.15116914
-    StartTime: 5333.8051000000005
-    FinishTime: 5338.8062
-  - HorizontalInput: -0.13475882
-    StartTime: 5338.8062
-    FinishTime: 5344.8053
-  - HorizontalInput: -0.11873599
-    StartTime: 5344.8053
-    FinishTime: 5350.8048
-  - HorizontalInput: -0.10460664
-    StartTime: 5350.8048
-    FinishTime: 5355.8058
-  - HorizontalInput: -0.09324051
-    StartTime: 5355.8058
-    FinishTime: 5361.8055
-  - HorizontalInput: -0.08190731
-    StartTime: 5361.8055
-    FinishTime: 5368.804700000001
-  - HorizontalInput: -0.072228156
-    StartTime: 5368.804700000001
-    FinishTime: 5373.806500000001
-  - HorizontalInput: -0.06386384
-    StartTime: 5373.806500000001
-    FinishTime: 5379.8051000000005
-  - HorizontalInput: -0.0562127
-    StartTime: 5379.8051000000005
-    FinishTime: 5385.805
-  - HorizontalInput: -0.05011913
-    StartTime: 5385.805
-    FinishTime: 5391.8394
-  - HorizontalInput: -0.044058327
-    StartTime: 5391.8394
-    FinishTime: 5396.8067
-  - HorizontalInput: -0.03894985
-    StartTime: 5396.8067
-    FinishTime: 5402.805600000001
-  - HorizontalInput: -0.034446627
-    StartTime: 5402.805600000001
-    FinishTime: 5408.8045
-  - HorizontalInput: -0.030694976
-    StartTime: 5408.8045
-    FinishTime: 5414.8051000000005
-  - HorizontalInput: -0.027043073
-    StartTime: 5414.8051000000005
-    FinishTime: 5419.8063
+    StartTime: 5234.139
+    FinishTime: 5672.6912
   - HorizontalInput: 1
-    StartTime: 5419.8063
-    FinishTime: 5712.4048
+    StartTime: 5672.6912
+    FinishTime: 5974.6916
   - HorizontalInput: 0
-    StartTime: 5712.4048
-    FinishTime: 5836.403600000001
+    StartTime: 5974.6916
+    FinishTime: 6092.2594
   - HorizontalInput: -1
-    StartTime: 5836.403600000001
-    FinishTime: 5898.1692
+    StartTime: 6092.2594
+    FinishTime: 6109.2594
   - HorizontalInput: 0
-    StartTime: 5898.1692
-    FinishTime: 7632.1575
+    StartTime: 6109.2594
+    FinishTime: 6142.8116
   - HorizontalInput: -1
-    StartTime: 7632.1575
-    FinishTime: 7710.159000000001
+    StartTime: 6142.8116
+    FinishTime: 6192.813300000001
   - HorizontalInput: 0
-    StartTime: 7710.159000000001
-    FinishTime: 7915.9897
+    StartTime: 6192.813300000001
+    FinishTime: 7640.4721
+  - HorizontalInput: 0.11313608
+    StartTime: 7640.4721
+    FinishTime: 7657.4727
+  - HorizontalInput: 0.20380859
+    StartTime: 7657.4727
+    FinishTime: 7673.4732
+  - HorizontalInput: 0.35420984
+    StartTime: 7673.4732
+    FinishTime: 7690.472900000001
+  - HorizontalInput: 0.49327782
+    StartTime: 7690.472900000001
+    FinishTime: 7707.472500000001
+  - HorizontalInput: 0.65333134
+    StartTime: 7707.472500000001
+    FinishTime: 7741.4728000000005
+  - HorizontalInput: 0.8351459
+    StartTime: 7741.4728000000005
+    FinishTime: 7758.472400000001
+  - HorizontalInput: 0.8839616
+    StartTime: 7758.472400000001
+    FinishTime: 7775.4727
+  - HorizontalInput: 0.92044014
+    StartTime: 7775.4727
+    FinishTime: 7791.472400000001
+  - HorizontalInput: 0.94327474
+    StartTime: 7791.472400000001
+    FinishTime: 7808.4735
+  - HorizontalInput: 0.9574362
+    StartTime: 7808.4735
+    FinishTime: 7842.4726
+  - HorizontalInput: 0.9741498
+    StartTime: 7842.4726
+    FinishTime: 7858.472500000001
+  - HorizontalInput: 0.97844243
+    StartTime: 7858.472500000001
+    FinishTime: 7875.4728000000005
+  - HorizontalInput: 0.98165005
+    StartTime: 7875.4728000000005
+    FinishTime: 7892.4728000000005
+  - HorizontalInput: 0.98354954
+    StartTime: 7892.4728000000005
+    FinishTime: 7908.473300000001
+  - HorizontalInput: 0
+    StartTime: 7908.473300000001
+    FinishTime: 8077.0491
+  - HorizontalInput: -1
+    StartTime: 8077.0491
+    FinishTime: 8699.029400000001
+  - HorizontalInput: 0
+    StartTime: 8699.029400000001
+    FinishTime: 8868.746000000001
+  - HorizontalInput: -1
+    StartTime: 8868.746000000001
+    FinishTime: 8901.7468
+  - HorizontalInput: 0
+    StartTime: 8901.7468
+    FinishTime: 8919.179100000001
+  - HorizontalInput: -1
+    StartTime: 8919.179100000001
+    FinishTime: 8935.8289
+  - HorizontalInput: 0
+    StartTime: 8935.8289
+    FinishTime: 9019.815400000001
+  - HorizontalInput: -1
+    StartTime: 9019.815400000001
+    FinishTime: 9036.8164
+  - HorizontalInput: 0
+    StartTime: 9036.8164
+    FinishTime: 10603.8285
+  - HorizontalInput: 0.072579384
+    StartTime: 10603.8285
+    FinishTime: 10620.8291
+  - HorizontalInput: 0.17755628
+    StartTime: 10620.8291
+    FinishTime: 10636.8285
+  - HorizontalInput: 0.32912916
+    StartTime: 10636.8285
+    FinishTime: 10653.8299
+  - HorizontalInput: 0.4851674
+    StartTime: 10653.8299
+    FinishTime: 10670.8289
+  - HorizontalInput: 0.6231361
+    StartTime: 10670.8289
+    FinishTime: 10687.83
+  - HorizontalInput: 0.74606323
+    StartTime: 10687.83
+    FinishTime: 10720.8285
+  - HorizontalInput: 0.88380903
+    StartTime: 10720.8285
+    FinishTime: 10737.828800000001
+  - HorizontalInput: 0.92100686
+    StartTime: 10737.828800000001
+    FinishTime: 10754.8289
+  - HorizontalInput: 0.9453868
+    StartTime: 10754.8289
+    FinishTime: 10770.8287
+  - HorizontalInput: 0.9624583
+    StartTime: 10770.8287
+    FinishTime: 10788.8285
+  - HorizontalInput: 0.973996
+    StartTime: 10788.8285
+    FinishTime: 10821.8299
+  - HorizontalInput: 0.98571366
+    StartTime: 10821.8299
+    FinishTime: 10838.829800000001
+  - HorizontalInput: 0.98878336
+    StartTime: 10838.829800000001
+    FinishTime: 10855.8285
+  - HorizontalInput: 0.9910574
+    StartTime: 10855.8285
+    FinishTime: 10872.828800000001
+  - HorizontalInput: 0.99246866
+    StartTime: 10872.828800000001
+    FinishTime: 10889.8303
+  - HorizontalInput: 0.9934494
+    StartTime: 10889.8303
+    FinishTime: 10922.828800000001
+  - HorizontalInput: 0.99453247
+    StartTime: 10922.828800000001
+    FinishTime: 10939.8289
+  - HorizontalInput: 0.9947921
+    StartTime: 10939.8289
+    FinishTime: 10956.828800000001
+  - HorizontalInput: 0.99498546
+    StartTime: 10956.828800000001
+    FinishTime: 10972.829
+  - HorizontalInput: 0.99510443
+    StartTime: 10972.829
+    FinishTime: 10990.8286
+  - HorizontalInput: 0.9951891
+    StartTime: 10990.8286
+    FinishTime: 11024.8286
+  - HorizontalInput: 0.99528027
+    StartTime: 11024.8286
+    FinishTime: 11041.8286
+  - HorizontalInput: 0.9953029
+    StartTime: 11041.8286
+    FinishTime: 11058.828300000001
+  - HorizontalInput: 0.9953193
+    StartTime: 11058.828300000001
+    FinishTime: 11075.8285
+  - HorizontalInput: 0.9953296
+    StartTime: 11075.8285
+    FinishTime: 11092.829
+  - HorizontalInput: 0.9953365
+    StartTime: 11092.829
+    FinishTime: 11108.828300000001
+  - HorizontalInput: 0.99534106
+    StartTime: 11108.828300000001
+    FinishTime: 11142.828500000001
+  - HorizontalInput: 0
+    StartTime: 11142.828500000001
+    FinishTime: 12576.8852
+  - HorizontalInput: -1
+    StartTime: 12576.8852
+    FinishTime: 13032.960500000001
+  - HorizontalInput: 0
+    StartTime: 13032.960500000001
+    FinishTime: 13401.9595
+  - HorizontalInput: 0.07054202
+    StartTime: 13401.9595
+    FinishTime: 13418.9596
+  - HorizontalInput: 0.20722713
+    StartTime: 13418.9596
+    FinishTime: 13435.959700000001
+  - HorizontalInput: 0.36326495
+    StartTime: 13435.959700000001
+    FinishTime: 13451.9599
+  - HorizontalInput: 0.5199071
+    StartTime: 13451.9599
+    FinishTime: 13468.9595
+  - HorizontalInput: 0.6871144
+    StartTime: 13468.9595
+    FinishTime: 13502.959700000001
+  - HorizontalInput: 0.8593823
+    StartTime: 13502.959700000001
+    FinishTime: 13518.961200000002
+  - HorizontalInput: 0.8999437
+    StartTime: 13518.961200000002
+    FinishTime: 13535.960500000001
+  - HorizontalInput: 0.93394643
+    StartTime: 13535.960500000001
+    FinishTime: 13552.9596
+  - HorizontalInput: 0.95420504
+    StartTime: 13552.9596
+    FinishTime: 13569.9595
+  - HorizontalInput: 0.96840924
+    StartTime: 13569.9595
+    FinishTime: 13602.9596
+  - HorizontalInput: 0.98436534
+    StartTime: 13602.9596
+    FinishTime: 13619.961000000001
+  - HorizontalInput: 0.98846126
+    StartTime: 13619.961000000001
+    FinishTime: 13636.9593
+  - HorizontalInput: 0.99135077
+    StartTime: 13636.9593
+    FinishTime: 13653.959400000002
+  - HorizontalInput: 0.99319506
+    StartTime: 13653.959400000002
+    FinishTime: 13670.959400000002
+  - HorizontalInput: 0.9943949
+    StartTime: 13670.959400000002
+    FinishTime: 13704.9609
+  - HorizontalInput: 0.9957594
+    StartTime: 13704.9609
+    FinishTime: 13721.9595
+  - HorizontalInput: 0.99611723
+    StartTime: 13721.9595
+    FinishTime: 13737.960700000001
+  - HorizontalInput: 0.9963553
+    StartTime: 13737.960700000001
+    FinishTime: 13755.9598
+  - HorizontalInput: 0.9965144
+    StartTime: 13755.9598
+    FinishTime: 13772.960200000001
+  - HorizontalInput: 0.99661326
+    StartTime: 13772.960200000001
+    FinishTime: 13789.959400000002
+  - HorizontalInput: 0.99668217
+    StartTime: 13789.959400000002
+    FinishTime: 13823.9593
+  - HorizontalInput: 0.9967582
+    StartTime: 13823.9593
+    FinishTime: 13840.959700000001
+  - HorizontalInput: 0.9967772
+    StartTime: 13840.959700000001
+    FinishTime: 13857.9593
+  - HorizontalInput: 0.99679023
+    StartTime: 13857.9593
+    FinishTime: 13874.9604
+  - HorizontalInput: 0.99679875
+    StartTime: 13874.9604
+    FinishTime: 13890.959400000002
+  - HorizontalInput: 0.99680436
+    StartTime: 13890.959400000002
+    FinishTime: 13908.959200000001
+  - HorizontalInput: 0.996808
+    StartTime: 13908.959200000001
+    FinishTime: 13941.959400000002
+  - HorizontalInput: 0.99681216
+    StartTime: 13941.959400000002
+    FinishTime: 13958.9595
+  - HorizontalInput: 0.9968132
+    StartTime: 13958.9595
+    FinishTime: 13974.9593
+  - HorizontalInput: 0.9968139
+    StartTime: 13974.9593
+    FinishTime: 13992.959400000002
+  - HorizontalInput: 0.99681437
+    StartTime: 13992.959400000002
+    FinishTime: 14009.9599
+  - HorizontalInput: 0.99681467
+    StartTime: 14009.9599
+    FinishTime: 14042.9593
+  - HorizontalInput: 0.996815
+    StartTime: 14042.9593
+    FinishTime: 14059.960200000001
+  - HorizontalInput: 0.99681515
+    StartTime: 14059.960200000001
+    FinishTime: 14076.959200000001
+  - HorizontalInput: 0
+    StartTime: 14076.959200000001
+    FinishTime: 14681.887200000001
+  - HorizontalInput: -1
+    StartTime: 14681.887200000001
+    FinishTime: 15202.140300000001
+  - HorizontalInput: 0
+    StartTime: 15202.140300000001
+    FinishTime: 15269.7445
   - HorizontalInput: 1
-    StartTime: 7915.9897
-    FinishTime: 8001.9607000000005
+    StartTime: 15269.7445
+    FinishTime: 15421.033800000001
   - HorizontalInput: 0
-    StartTime: 8001.9607000000005
-    FinishTime: 8044.9934
-  - HorizontalInput: 0.016030947
-    StartTime: 8044.9934
-    FinishTime: 8050.994500000001
-  - HorizontalInput: 0.03136394
-    StartTime: 8050.994500000001
-    FinishTime: 8056.993600000001
-  - HorizontalInput: 0.048902966
-    StartTime: 8056.993600000001
-    FinishTime: 8062.9934
-  - HorizontalInput: 0.06270594
-    StartTime: 8062.9934
-    FinishTime: 8069.993600000001
-  - HorizontalInput: 0.08215662
-    StartTime: 8069.993600000001
-    FinishTime: 8075.9937
-  - HorizontalInput: 0.11303929
-    StartTime: 8075.9937
-    FinishTime: 8082.9928
-  - HorizontalInput: 0.14388423
-    StartTime: 8082.9928
-    FinishTime: 8088.9934
-  - HorizontalInput: 0.17547838
-    StartTime: 8088.9934
-    FinishTime: 8094.9942
-  - HorizontalInput: 0.20195036
-    StartTime: 8094.9942
-    FinishTime: 8100.9926000000005
-  - HorizontalInput: 0.2366247
-    StartTime: 8100.9926000000005
-    FinishTime: 8107.9933
-  - HorizontalInput: 0.2863083
-    StartTime: 8107.9933
-    FinishTime: 8114.9935000000005
-  - HorizontalInput: 0.35365576
-    StartTime: 8114.9935000000005
-    FinishTime: 8120.993100000001
-  - HorizontalInput: 0.426794
-    StartTime: 8120.993100000001
-    FinishTime: 8126.9944000000005
-  - HorizontalInput: 0.48441508
-    StartTime: 8126.9944000000005
-    FinishTime: 8132.9933
-  - HorizontalInput: 0.5455448
-    StartTime: 8132.9933
-    FinishTime: 8139.994000000001
-  - HorizontalInput: 0.6002421
-    StartTime: 8139.994000000001
-    FinishTime: 8146.994100000001
-  - HorizontalInput: 0.64423156
-    StartTime: 8146.994100000001
-    FinishTime: 8152.993
-  - HorizontalInput: 0.68791395
-    StartTime: 8152.993
-    FinishTime: 8158.9933
-  - HorizontalInput: 0.7185615
-    StartTime: 8158.9933
-    FinishTime: 8165.9928
-  - HorizontalInput: 0.74942935
-    StartTime: 8165.9928
-    FinishTime: 8171.994100000001
-  - HorizontalInput: 0.77919847
-    StartTime: 8171.994100000001
-    FinishTime: 8178.052900000001
-  - HorizontalInput: 0.8037779
-    StartTime: 8178.052900000001
-    FinishTime: 8184.993200000001
-  - HorizontalInput: 0.8253428
-    StartTime: 8184.993200000001
-    FinishTime: 8190.9933
-  - HorizontalInput: 0.84329087
-    StartTime: 8190.9933
-    FinishTime: 8197.2099
-  - HorizontalInput: 0.85966927
-    StartTime: 8197.2099
-    FinishTime: 8203.992900000001
-  - HorizontalInput: 0.8756443
-    StartTime: 8203.992900000001
-    FinishTime: 8209.9933
-  - HorizontalInput: 0.88783705
-    StartTime: 8209.9933
-    FinishTime: 8215.5115
-  - HorizontalInput: 0.89775836
-    StartTime: 8215.5115
-    FinishTime: 8221.026
-  - HorizontalInput: 0.9065594
-    StartTime: 8221.026
-    FinishTime: 8227.0254
-  - HorizontalInput: 0.91411686
-    StartTime: 8227.0254
-    FinishTime: 8232.0256
-  - HorizontalInput: 0.9217944
-    StartTime: 8232.0256
-    FinishTime: 8238.026600000001
-  - HorizontalInput: 0.927811
-    StartTime: 8238.026600000001
-    FinishTime: 8243.026600000001
-  - HorizontalInput: 0.9330633
-    StartTime: 8243.026600000001
-    FinishTime: 8249.036
-  - HorizontalInput: 0.9381086
-    StartTime: 8249.036
-    FinishTime: 8254.0256
-  - HorizontalInput: 0.9422785
-    StartTime: 8254.0256
-    FinishTime: 8259.0256
-  - HorizontalInput: 0.9458338
-    StartTime: 8259.0256
-    FinishTime: 8265.025300000001
-  - HorizontalInput: 0.9492653
-    StartTime: 8265.025300000001
-    FinishTime: 8271.0246
-  - HorizontalInput: 0.95249486
-    StartTime: 8271.0246
-    FinishTime: 8276.0259
-  - HorizontalInput: 0.9550922
-    StartTime: 8276.0259
-    FinishTime: 8282.0255
-  - HorizontalInput: 0.9575123
-    StartTime: 8282.0255
-    FinishTime: 8287.025800000001
-  - HorizontalInput: 0.9597019
-    StartTime: 8287.025800000001
-    FinishTime: 8293.026
-  - HorizontalInput: 0.961718
-    StartTime: 8293.026
-    FinishTime: 8298.026100000001
-  - HorizontalInput: 0.96334594
-    StartTime: 8298.026100000001
-    FinishTime: 8304.0653
-  - HorizontalInput: 0.96480906
-    StartTime: 8304.0653
-    FinishTime: 8309.0267
-  - HorizontalInput: 0.9662043
-    StartTime: 8309.0267
-    FinishTime: 8315.0257
-  - HorizontalInput: 0.96739155
-    StartTime: 8315.0257
-    FinishTime: 8320.0268
-  - HorizontalInput: 0.96839005
-    StartTime: 8320.0268
-    FinishTime: 8326.0256
-  - HorizontalInput: 0.9693109
-    StartTime: 8326.0256
-    FinishTime: 8331.0281
-  - HorizontalInput: 0.97023004
-    StartTime: 8331.0281
-    FinishTime: 8337.0267
-  - HorizontalInput: 0.9709984
-    StartTime: 8337.0267
-    FinishTime: 8342.0262
-  - HorizontalInput: 0.9716412
-    StartTime: 8342.0262
-    FinishTime: 8348.026
-  - HorizontalInput: 0.9722332
-    StartTime: 8348.026
-    FinishTime: 8354.025
-  - HorizontalInput: 0.9727964
-    StartTime: 8354.025
-    FinishTime: 8359.0264
-  - HorizontalInput: 0.9732821
-    StartTime: 8359.0264
-    FinishTime: 8365.8832
-  - HorizontalInput: 0.97371584
-    StartTime: 8365.8832
-    FinishTime: 8371.870700000001
-  - HorizontalInput: 0.97411776
-    StartTime: 8371.870700000001
-    FinishTime: 8376.8726
-  - HorizontalInput: 0.97443986
-    StartTime: 8376.8726
-    FinishTime: 8381.873300000001
-  - HorizontalInput: 0.9747159
-    StartTime: 8381.873300000001
-    FinishTime: 8387.8704
-  - HorizontalInput: 0.9749594
-    StartTime: 8387.8704
-    FinishTime: 8392.8716
-  - HorizontalInput: 0.9751901
-    StartTime: 8392.8716
-    FinishTime: 8398.870700000001
-  - HorizontalInput: 0.9753914
-    StartTime: 8398.870700000001
-    FinishTime: 8404.8711
-  - HorizontalInput: 0.97556466
-    StartTime: 8404.8711
-    FinishTime: 8409.8721
-  - HorizontalInput: 0.9757403
-    StartTime: 8409.8721
-    FinishTime: 8415.8718
-  - HorizontalInput: 0.9758795
-    StartTime: 8415.8718
-    FinishTime: 8420.8722
-  - HorizontalInput: 0.97600245
-    StartTime: 8420.8722
-    FinishTime: 8426.8775
-  - HorizontalInput: 0.9761168
-    StartTime: 8426.8775
-    FinishTime: 8432.8732
-  - HorizontalInput: 0.97622496
-    StartTime: 8432.8732
-    FinishTime: 8437.8717
-  - HorizontalInput: 0.9763118
-    StartTime: 8437.8717
-    FinishTime: 8443.8714
-  - HorizontalInput: 0.9763863
-    StartTime: 8443.8714
-    FinishTime: 8449.870200000001
-  - HorizontalInput: 0.9764636
-    StartTime: 8449.870200000001
-    FinishTime: 8454.8717
-  - HorizontalInput: 0.9765236
-    StartTime: 8454.8717
-    FinishTime: 8459.8724
-  - HorizontalInput: 0.97657555
-    StartTime: 8459.8724
-    FinishTime: 8465.8705
-  - HorizontalInput: 0
-    StartTime: 8465.8705
-    FinishTime: 8718.928600000001
+    StartTime: 15421.033800000001
+    FinishTime: 15572.1622
   - HorizontalInput: -1
-    StartTime: 8718.928600000001
-    FinishTime: 9305.2996
+    StartTime: 15572.1622
+    FinishTime: 15638.4261
   - HorizontalInput: 0
-    StartTime: 9305.2996
-    FinishTime: 10620.1013
-  - HorizontalInput: 0.016116513
-    StartTime: 10620.1013
-    FinishTime: 10627.1021
-  - HorizontalInput: 0.035656348
-    StartTime: 10627.1021
-    FinishTime: 10633.101400000001
-  - HorizontalInput: 0.05317279
-    StartTime: 10633.101400000001
-    FinishTime: 10638.102700000001
-  - HorizontalInput: 0.06632906
-    StartTime: 10638.102700000001
-    FinishTime: 10644.1028
-  - HorizontalInput: 0.084347814
-    StartTime: 10644.1028
-    FinishTime: 10652.1026
-  - HorizontalInput: 0.104282975
-    StartTime: 10652.1026
-    FinishTime: 10658.1028
-  - HorizontalInput: 0.12320435
-    StartTime: 10658.1028
-    FinishTime: 10664.1043
-  - HorizontalInput: 0.13936439
-    StartTime: 10664.1043
-    FinishTime: 10670.1026
-  - HorizontalInput: 0.15542214
-    StartTime: 10670.1026
-    FinishTime: 10676.1018
-  - HorizontalInput: 0.17388992
-    StartTime: 10676.1018
-    FinishTime: 10682.6739
-  - HorizontalInput: 0.19596833
-    StartTime: 10682.6739
-    FinishTime: 10688.1018
-  - HorizontalInput: 0.21315525
-    StartTime: 10688.1018
-    FinishTime: 10694.102
-  - HorizontalInput: 0.22879986
-    StartTime: 10694.102
-    FinishTime: 10700.1025
-  - HorizontalInput: 0.24814358
-    StartTime: 10700.1025
-    FinishTime: 10706.1019
-  - HorizontalInput: 0.26471916
-    StartTime: 10706.1019
-    FinishTime: 10711.1038
-  - HorizontalInput: 0.27908406
-    StartTime: 10711.1038
-    FinishTime: 10717.1055
-  - HorizontalInput: 0.2991509
-    StartTime: 10717.1055
-    FinishTime: 10724.102
-  - HorizontalInput: 0.3148228
-    StartTime: 10724.102
-    FinishTime: 10730.1062
-  - HorizontalInput: 0.33652928
-    StartTime: 10730.1062
-    FinishTime: 10735.1037
-  - HorizontalInput: 0.35278237
-    StartTime: 10735.1037
-    FinishTime: 10741.1016
-  - HorizontalInput: 0.36626732
-    StartTime: 10741.1016
-    FinishTime: 10747.102200000001
-  - HorizontalInput: 0.3793666
-    StartTime: 10747.102200000001
-    FinishTime: 10752.1024
-  - HorizontalInput: 0.3904349
-    StartTime: 10752.1024
-    FinishTime: 10757.1043
-  - HorizontalInput: 0.39995053
-    StartTime: 10757.1043
-    FinishTime: 10763.1556
-  - HorizontalInput: 0.40857914
-    StartTime: 10763.1556
-    FinishTime: 10768.6168
-  - HorizontalInput: 0.41644964
-    StartTime: 10768.6168
-    FinishTime: 10773.6169
-  - HorizontalInput: 0.4236392
-    StartTime: 10773.6169
-    FinishTime: 10779.6177
-  - HorizontalInput: 0.42997906
-    StartTime: 10779.6177
-    FinishTime: 10785.6167
-  - HorizontalInput: 0.43529496
-    StartTime: 10785.6167
-    FinishTime: 10790.617600000001
-  - HorizontalInput: 0.44032347
-    StartTime: 10790.617600000001
-    FinishTime: 10795.6177
-  - HorizontalInput: 0.44452488
-    StartTime: 10795.6177
-    FinishTime: 10801.6159
-  - HorizontalInput: 0.44828925
-    StartTime: 10801.6159
-    FinishTime: 10806.6175
-  - HorizontalInput: 0.45167315
-    StartTime: 10806.6175
-    FinishTime: 10812.5579
-  - HorizontalInput: 0.4549044
-    StartTime: 10812.5579
-    FinishTime: 10817.5581
-  - HorizontalInput: 0.4576234
-    StartTime: 10817.5581
-    FinishTime: 10823.560300000001
-  - HorizontalInput: 0.46002626
-    StartTime: 10823.560300000001
-    FinishTime: 10828.559000000001
-  - HorizontalInput: 0.46224156
-    StartTime: 10828.559000000001
-    FinishTime: 10834.558
-  - HorizontalInput: 0.4641484
-    StartTime: 10834.558
-    FinishTime: 10840.0722
-  - HorizontalInput: 0.465828
-    StartTime: 10840.0722
-    FinishTime: 10846.070300000001
-  - HorizontalInput: 0.4673591
-    StartTime: 10846.070300000001
-    FinishTime: 10851.070300000001
-  - HorizontalInput: 0.46883088
-    StartTime: 10851.070300000001
-    FinishTime: 10857.071100000001
-  - HorizontalInput: 0.47008964
-    StartTime: 10857.071100000001
-    FinishTime: 10862.070600000001
-  - HorizontalInput: 0.4711344
-    StartTime: 10862.070600000001
-    FinishTime: 10868.5866
-  - HorizontalInput: 0.4721305
-    StartTime: 10868.5866
-    FinishTime: 10874.587000000001
-  - HorizontalInput: 0.47302294
-    StartTime: 10874.587000000001
-    FinishTime: 10879.5885
-  - HorizontalInput: 0.4737223
-    StartTime: 10879.5885
-    FinishTime: 10884.5879
-  - HorizontalInput: 0.47435185
-    StartTime: 10884.5879
-    FinishTime: 10890.0987
-  - HorizontalInput: 0.4749596
-    StartTime: 10890.0987
-    FinishTime: 10895.0987
-  - HorizontalInput: 0.4754582
-    StartTime: 10895.0987
-    FinishTime: 10901.098
-  - HorizontalInput: 0.47592372
-    StartTime: 10901.098
-    FinishTime: 10907.0982
-  - HorizontalInput: 0.47634062
-    StartTime: 10907.0982
-    FinishTime: 10912.0987
-  - HorizontalInput: 0.47673765
-    StartTime: 10912.0987
-    FinishTime: 10917.628400000001
-  - HorizontalInput: 0.47707948
-    StartTime: 10917.628400000001
-    FinishTime: 10923.6142
-  - HorizontalInput: 0.477364
-    StartTime: 10923.6142
-    FinishTime: 10928.613000000001
-  - HorizontalInput: 0.47762468
-    StartTime: 10928.613000000001
-    FinishTime: 10934.6131
-  - HorizontalInput: 0.4778655
-    StartTime: 10934.6131
-    FinishTime: 10940.1239
-  - HorizontalInput: 0.47806185
-    StartTime: 10940.1239
-    FinishTime: 10945.1242
-  - HorizontalInput: 0.47823948
-    StartTime: 10945.1242
-    FinishTime: 10951.125
-  - HorizontalInput: 0.4784166
-    StartTime: 10951.125
-    FinishTime: 10956.125600000001
-  - HorizontalInput: 0.4785552
-    StartTime: 10956.125600000001
-    FinishTime: 10962.124600000001
-  - HorizontalInput: 0.47867635
-    StartTime: 10962.124600000001
-    FinishTime: 10967.1244
-  - HorizontalInput: 0.4787922
-    StartTime: 10967.1244
-    FinishTime: 10973.1236
-  - HorizontalInput: 0.47889864
-    StartTime: 10973.1236
-    FinishTime: 10978.124
-  - HorizontalInput: 0.47898525
-    StartTime: 10978.124
-    FinishTime: 10984.1231
-  - HorizontalInput: 0.47906563
-    StartTime: 10984.1231
-    FinishTime: 10989.1239
-  - HorizontalInput: 0.47913975
-    StartTime: 10989.1239
-    FinishTime: 10994.1257
-  - HorizontalInput: 0.47920302
-    StartTime: 10994.1257
-    FinishTime: 10999.692700000001
-  - HorizontalInput: 0.4792607
-    StartTime: 10999.692700000001
-    FinishTime: 11005.692500000001
-  - HorizontalInput: 0.479312
-    StartTime: 11005.692500000001
-    FinishTime: 11011.6931
-  - HorizontalInput: 0.47936267
-    StartTime: 11011.6931
-    FinishTime: 11016.6926
-  - HorizontalInput: 0.47940275
-    StartTime: 11016.6926
-    FinishTime: 11022.6924
-  - HorizontalInput: 0.47943738
-    StartTime: 11022.6924
-    FinishTime: 11027.694000000001
-  - HorizontalInput: 0.47946885
-    StartTime: 11027.694000000001
-    FinishTime: 11033.694800000001
-  - HorizontalInput: 0.47949842
-    StartTime: 11033.694800000001
-    FinishTime: 11038.6933
-  - HorizontalInput: 0.4795232
-    StartTime: 11038.6933
-    FinishTime: 11044.6926
-  - HorizontalInput: 0.4795454
-    StartTime: 11044.6926
-    FinishTime: 11049.6936
-  - HorizontalInput: 0.47956613
-    StartTime: 11049.6936
-    FinishTime: 11055.6942
-  - HorizontalInput: 0.47958443
-    StartTime: 11055.6942
-    FinishTime: 11060.693800000001
-  - HorizontalInput: 0.47960022
-    StartTime: 11060.693800000001
-    FinishTime: 11066.693800000001
-  - HorizontalInput: 0.4796139
-    StartTime: 11066.693800000001
-    FinishTime: 11071.693800000001
-  - HorizontalInput: 0.47962704
-    StartTime: 11071.693800000001
-    FinishTime: 11077.7041
-  - HorizontalInput: 0.47963774
-    StartTime: 11077.7041
-    FinishTime: 11083.0062
-  - HorizontalInput: 0.4796474
-    StartTime: 11083.0062
-    FinishTime: 11088.6918
-  - HorizontalInput: 0.47965586
-    StartTime: 11088.6918
-    FinishTime: 11093.694500000001
-  - HorizontalInput: 0.47966406
-    StartTime: 11093.694500000001
-    FinishTime: 11099.704600000001
-  - HorizontalInput: 0.47967124
-    StartTime: 11099.704600000001
-    FinishTime: 11104.6931
-  - HorizontalInput: 0.47967756
-    StartTime: 11104.6931
-    FinishTime: 11110.755200000001
-  - HorizontalInput: 0.47968322
-    StartTime: 11110.755200000001
-    FinishTime: 11115.6932
-  - HorizontalInput: 0.47968805
-    StartTime: 11115.6932
-    FinishTime: 11121.6929
-  - HorizontalInput: 0.47969243
-    StartTime: 11121.6929
-    FinishTime: 11126.6934
-  - HorizontalInput: 0.47969618
-    StartTime: 11126.6934
-    FinishTime: 11131.6928
-  - HorizontalInput: 0.47969982
-    StartTime: 11131.6928
-    FinishTime: 11137.703800000001
-  - HorizontalInput: 0.47970283
-    StartTime: 11137.703800000001
-    FinishTime: 11142.704
-  - HorizontalInput: 0.47970557
-    StartTime: 11142.704
-    FinishTime: 11148.711500000001
-  - HorizontalInput: 0.47970793
-    StartTime: 11148.711500000001
-    FinishTime: 11153.703300000001
-  - HorizontalInput: 0.47971037
-    StartTime: 11153.703300000001
-    FinishTime: 11159.703300000001
-  - HorizontalInput: 0.4797123
-    StartTime: 11159.703300000001
-    FinishTime: 11165.703800000001
-  - HorizontalInput: 0.47971407
-    StartTime: 11165.703800000001
-    FinishTime: 11170.703500000001
-  - HorizontalInput: 0.4797158
-    StartTime: 11170.703500000001
-    FinishTime: 11176.703300000001
-  - HorizontalInput: 0.47971714
-    StartTime: 11176.703300000001
-    FinishTime: 11181.703800000001
-  - HorizontalInput: 0.47971833
-    StartTime: 11181.703800000001
-    FinishTime: 11187.7032
-  - HorizontalInput: 0.47971943
-    StartTime: 11187.7032
-    FinishTime: 11193.7039
-  - HorizontalInput: 0.47972044
-    StartTime: 11193.7039
-    FinishTime: 11198.7032
-  - HorizontalInput: 0.47972128
-    StartTime: 11198.7032
-    FinishTime: 11204.703500000001
-  - HorizontalInput: 0.47972205
-    StartTime: 11204.703500000001
-    FinishTime: 11209.7031
-  - HorizontalInput: 0.47972277
-    StartTime: 11209.7031
-    FinishTime: 11214.703500000001
-  - HorizontalInput: 0.47972333
-    StartTime: 11214.703500000001
-    FinishTime: 11220.703300000001
-  - HorizontalInput: 0.47972387
-    StartTime: 11220.703300000001
-    FinishTime: 11226.7026
-  - HorizontalInput: 0.47972432
-    StartTime: 11226.7026
-    FinishTime: 11231.7037
-  - HorizontalInput: 0.47972476
-    StartTime: 11231.7037
-    FinishTime: 11236.7032
-  - HorizontalInput: 0.47972515
-    StartTime: 11236.7032
-    FinishTime: 11242.704
-  - HorizontalInput: 0.47972548
-    StartTime: 11242.704
-    FinishTime: 11247.7047
-  - HorizontalInput: 0.47972575
-    StartTime: 11247.7047
-    FinishTime: 11253.7031
-  - HorizontalInput: 0.47972605
-    StartTime: 11253.7031
-    FinishTime: 11258.704600000001
-  - HorizontalInput: 0.47972628
-    StartTime: 11258.704600000001
-    FinishTime: 11264.7031
-  - HorizontalInput: 0.4797265
-    StartTime: 11264.7031
-    FinishTime: 11269.7029
-  - HorizontalInput: 0.4797267
-    StartTime: 11269.7029
-    FinishTime: 11275.7036
-  - HorizontalInput: 0.47972688
-    StartTime: 11275.7036
-    FinishTime: 11281.0463
-  - HorizontalInput: 0.47972703
-    StartTime: 11281.0463
-    FinishTime: 11287.0467
-  - HorizontalInput: 0.47972715
-    StartTime: 11287.0467
-    FinishTime: 11292.046100000001
-  - HorizontalInput: 0.47972727
-    StartTime: 11292.046100000001
-    FinishTime: 11298.0478
-  - HorizontalInput: 0.47972736
-    StartTime: 11298.0478
-    FinishTime: 11304.0465
-  - HorizontalInput: 0.47972745
-    StartTime: 11304.0465
-    FinishTime: 11309.0472
-  - HorizontalInput: 0.47972754
-    StartTime: 11309.0472
-    FinishTime: 11314.0472
-  - HorizontalInput: 0.4797276
-    StartTime: 11314.0472
-    FinishTime: 11320.049700000001
-  - HorizontalInput: 0.47972766
-    StartTime: 11320.049700000001
-    FinishTime: 11325.0462
-  - HorizontalInput: 0.47972772
-    StartTime: 11325.0462
-    FinishTime: 11331.0485
-  - HorizontalInput: 0.47972777
-    StartTime: 11331.0485
-    FinishTime: 11336.0462
-  - HorizontalInput: 0.47972783
-    StartTime: 11336.0462
-    FinishTime: 11342.3034
-  - HorizontalInput: 0.47972786
-    StartTime: 11342.3034
-    FinishTime: 11347.3047
-  - HorizontalInput: 0.4797279
-    StartTime: 11347.3047
-    FinishTime: 11353.3035
-  - HorizontalInput: 0.47972792
-    StartTime: 11353.3035
-    FinishTime: 11358.304
-  - HorizontalInput: 0.47972795
-    StartTime: 11358.304
-    FinishTime: 11364.3107
-  - HorizontalInput: 0.47972798
-    StartTime: 11364.3107
-    FinishTime: 11370.303600000001
-  - HorizontalInput: 0.479728
-    StartTime: 11370.303600000001
-    FinishTime: 11375.3045
-  - HorizontalInput: 0.47972804
-    StartTime: 11375.3045
-    FinishTime: 11380.3037
-  - HorizontalInput: 0.47972807
-    StartTime: 11380.3037
-    FinishTime: 11486.313600000001
+    StartTime: 15638.4261
+    FinishTime: 16311.969000000001
+  - HorizontalInput: -0.08958898
+    StartTime: 16311.969000000001
+    FinishTime: 16329.133300000001
+  - HorizontalInput: -0.17775865
+    StartTime: 16329.133300000001
+    FinishTime: 16362.3454
+  - HorizontalInput: -0.346808
+    StartTime: 16362.3454
+    FinishTime: 16379.345200000002
+  - HorizontalInput: -0.3891545
+    StartTime: 16379.345200000002
+    FinishTime: 16395.505400000002
+  - HorizontalInput: -0.4203249
+    StartTime: 16395.505400000002
+    FinishTime: 16413.6171
+  - HorizontalInput: -0.4401076
+    StartTime: 16413.6171
+    FinishTime: 16430.164500000003
+  - HorizontalInput: -0.4532495
+    StartTime: 16430.164500000003
+    FinishTime: 16464.323
+  - HorizontalInput: -0.46819013
+    StartTime: 16464.323
+    FinishTime: 16480.4653
+  - HorizontalInput: -0.47212496
+    StartTime: 16480.4653
+    FinishTime: 16497.1971
+  - HorizontalInput: -0.474644
+    StartTime: 16497.1971
+    FinishTime: 16514.195900000002
+  - HorizontalInput: -0.4764321
+    StartTime: 16514.195900000002
+    FinishTime: 16530.656300000002
+  - HorizontalInput: -0.47752723
+    StartTime: 16530.656300000002
+    FinishTime: 16564.3079
+  - HorizontalInput: -0.47875366
+    StartTime: 16564.3079
+    FinishTime: 16581.05
+  - HorizontalInput: -0.47905138
+    StartTime: 16581.05
+    FinishTime: 16598.0505
+  - HorizontalInput: -0.47929078
+    StartTime: 16598.0505
+    FinishTime: 16614.6679
   - HorizontalInput: 0
-    StartTime: 11486.313600000001
-    FinishTime: 13242.3304
-  - HorizontalInput: -1
-    StartTime: 13242.3304
-    FinishTime: 13566.320000000002
-  - HorizontalInput: 0
-    StartTime: 13566.320000000002
-    FinishTime: 13826.8363
-  - HorizontalInput: 0.022267064
-    StartTime: 13826.8363
-    FinishTime: 13833.8358
-  - HorizontalInput: 0.04934812
-    StartTime: 13833.8358
-    FinishTime: 13838.8367
-  - HorizontalInput: 0.06892693
-    StartTime: 13838.8367
-    FinishTime: 13845.836000000001
-  - HorizontalInput: 0.10378161
-    StartTime: 13845.836000000001
-    FinishTime: 13851.8359
-  - HorizontalInput: 0.15455684
-    StartTime: 13851.8359
-    FinishTime: 13858.835500000001
-  - HorizontalInput: 0.21537064
-    StartTime: 13858.835500000001
-    FinishTime: 13865.8356
-  - HorizontalInput: 0.28175417
-    StartTime: 13865.8356
-    FinishTime: 13870.836000000001
-  - HorizontalInput: 0.3369674
-    StartTime: 13870.836000000001
-    FinishTime: 13877.836000000001
-  - HorizontalInput: 0.40245065
-    StartTime: 13877.836000000001
-    FinishTime: 13883.8356
-  - HorizontalInput: 0.47715986
-    StartTime: 13883.8356
-    FinishTime: 13890.8358
-  - HorizontalInput: 0.54841983
-    StartTime: 13890.8358
-    FinishTime: 13896.836200000002
-  - HorizontalInput: 0.60604054
-    StartTime: 13896.836200000002
-    FinishTime: 13901.8359
-  - HorizontalInput: 0.6491271
-    StartTime: 13901.8359
-    FinishTime: 13909.3497
-  - HorizontalInput: 0.6940648
-    StartTime: 13909.3497
-    FinishTime: 13915.35
-  - HorizontalInput: 0.7350509
-    StartTime: 13915.35
-    FinishTime: 13921.349400000001
-  - HorizontalInput: 0.76855105
-    StartTime: 13921.349400000001
-    FinishTime: 13927.350900000001
-  - HorizontalInput: 0.7948432
-    StartTime: 13927.350900000001
-    FinishTime: 13933.349100000001
-  - HorizontalInput: 0.8204599
-    StartTime: 13933.349100000001
-    FinishTime: 13940.349900000001
-  - HorizontalInput: 0.8439621
-    StartTime: 13940.349900000001
-    FinishTime: 13946.3508
-  - HorizontalInput: 0.8629912
-    StartTime: 13946.3508
-    FinishTime: 13952.349600000001
-  - HorizontalInput: 0.8788075
-    StartTime: 13952.349600000001
-    FinishTime: 13957.3511
-  - HorizontalInput: 0.8924353
-    StartTime: 13957.3511
-    FinishTime: 13963.349900000001
-  - HorizontalInput: 0.9038703
-    StartTime: 13963.349900000001
-    FinishTime: 13968.893100000001
-  - HorizontalInput: 0.9142129
-    StartTime: 13968.893100000001
-    FinishTime: 13974.35
-  - HorizontalInput: 0.924185
-    StartTime: 13974.35
-    FinishTime: 13979.3511
-  - HorizontalInput: 0.9327492
-    StartTime: 13979.3511
-    FinishTime: 13986.3513
-  - HorizontalInput: 0.94062954
-    StartTime: 13986.3513
-    FinishTime: 13991.889500000001
-  - HorizontalInput: 0.9475347
-    StartTime: 13991.889500000001
-    FinishTime: 13996.8914
-  - HorizontalInput: 0.9532276
-    StartTime: 13996.8914
-    FinishTime: 14002.889500000001
-  - HorizontalInput: 0.9584998
-    StartTime: 14002.889500000001
-    FinishTime: 14008.8902
-  - HorizontalInput: 0.96318465
-    StartTime: 14008.8902
-    FinishTime: 14013.8912
-  - HorizontalInput: 0.96742964
-    StartTime: 14013.8912
-    FinishTime: 14019.891800000001
-  - HorizontalInput: 0.9711951
-    StartTime: 14019.891800000001
-    FinishTime: 14025.8891
-  - HorizontalInput: 0.97424877
-    StartTime: 14025.8891
-    FinishTime: 14030.8902
-  - HorizontalInput: 0.97735906
-    StartTime: 14030.8902
-    FinishTime: 14036.891000000001
-  - HorizontalInput: 0.98005664
-    StartTime: 14036.891000000001
-    FinishTime: 14041.890000000001
-  - HorizontalInput: 0.9821677
-    StartTime: 14041.890000000001
-    FinishTime: 14047.8893
-  - HorizontalInput: 0.9840958
-    StartTime: 14047.8893
-    FinishTime: 14053.8902
-  - HorizontalInput: 0.9859036
-    StartTime: 14053.8902
-    FinishTime: 14058.889500000001
-  - HorizontalInput: 0.9873665
-    StartTime: 14058.889500000001
-    FinishTime: 14063.891000000001
-  - HorizontalInput: 0.98867327
-    StartTime: 14063.891000000001
-    FinishTime: 14069.8902
-  - HorizontalInput: 0.99006736
-    StartTime: 14069.8902
-    FinishTime: 14075.889700000002
-  - HorizontalInput: 0.99116516
-    StartTime: 14075.889700000002
-    FinishTime: 14080.8901
-  - HorizontalInput: 0.99213165
-    StartTime: 14080.8901
-    FinishTime: 14086.8896
-  - HorizontalInput: 0.9930283
-    StartTime: 14086.8896
-    FinishTime: 14091.890000000001
-  - HorizontalInput: 0.99381495
-    StartTime: 14091.890000000001
-    FinishTime: 14097.890300000001
-  - HorizontalInput: 0.99448353
-    StartTime: 14097.890300000001
-    FinishTime: 14103.8896
-  - HorizontalInput: 0.9951015
-    StartTime: 14103.8896
-    FinishTime: 14108.8907
-  - HorizontalInput: 0.99567366
-    StartTime: 14108.8907
-    FinishTime: 14113.8899
-  - HorizontalInput: 0.9961261
-    StartTime: 14113.8899
-    FinishTime: 14119.8896
-  - HorizontalInput: 0.9965613
-    StartTime: 14119.8896
-    FinishTime: 14125.890500000001
-  - HorizontalInput: 0.9969506
-    StartTime: 14125.890500000001
-    FinishTime: 14130.8894
-  - HorizontalInput: 0.99730057
-    StartTime: 14130.8894
-    FinishTime: 14136.8909
-  - HorizontalInput: 0.99762493
-    StartTime: 14136.8909
-    FinishTime: 14142.890000000001
-  - HorizontalInput: 0.9978816
-    StartTime: 14142.890000000001
-    FinishTime: 14148.890000000001
-  - HorizontalInput: 0.998111
-    StartTime: 14148.890000000001
-    FinishTime: 14153.8894
-  - HorizontalInput: 0.9983258
-    StartTime: 14153.8894
-    FinishTime: 14158.890300000001
-  - HorizontalInput: 0.998503
-    StartTime: 14158.890300000001
-    FinishTime: 14164.889700000002
-  - HorizontalInput: 0.99866146
-    StartTime: 14164.889700000002
-    FinishTime: 14170.889700000002
-  - HorizontalInput: 0.9988281
-    StartTime: 14170.889700000002
-    FinishTime: 14175.8902
-  - HorizontalInput: 0.9989535
-    StartTime: 14175.8902
-    FinishTime: 14181.891500000002
-  - HorizontalInput: 0.99906933
-    StartTime: 14181.891500000002
-    FinishTime: 14187.8235
-  - HorizontalInput: 0.9991789
-    StartTime: 14187.8235
-    FinishTime: 14192.823900000001
-  - HorizontalInput: 0.9992717
-    StartTime: 14192.823900000001
-    FinishTime: 14198.823600000002
-  - HorizontalInput: 0.9993514
-    StartTime: 14198.823600000002
-    FinishTime: 14204.8238
-  - HorizontalInput: 0.9994219
-    StartTime: 14204.8238
-    FinishTime: 14209.824700000001
-  - HorizontalInput: 0.9994909
-    StartTime: 14209.824700000001
-    FinishTime: 14214.8241
-  - HorizontalInput: 0.9995454
-    StartTime: 14214.8241
-    FinishTime: 14220.8246
-  - HorizontalInput: 0.9995977
-    StartTime: 14220.8246
-    FinishTime: 14226.8238
-  - HorizontalInput: 0.99964374
-    StartTime: 14226.8238
-    FinishTime: 14232.8253
-  - HorizontalInput: 0.99968606
-    StartTime: 14232.8253
-    FinishTime: 14238.8333
-  - HorizontalInput: 0.9997228
-    StartTime: 14238.8333
-    FinishTime: 14243.835000000001
-  - HorizontalInput: 0.999752
-    StartTime: 14243.835000000001
-    FinishTime: 14249.834200000001
-  - HorizontalInput: 0.9997809
-    StartTime: 14249.834200000001
-    FinishTime: 14254.836200000002
-  - HorizontalInput: 0.9998054
-    StartTime: 14254.836200000002
-    FinishTime: 14260.835200000001
-  - HorizontalInput: 0.9998269
-    StartTime: 14260.835200000001
-    FinishTime: 14265.8349
-  - HorizontalInput: 0.9998445
-    StartTime: 14265.8349
-    FinishTime: 14271.8348
-  - HorizontalInput: 0.99986243
-    StartTime: 14271.8348
-    FinishTime: 14276.8348
-  - HorizontalInput: 0.99987656
-    StartTime: 14276.8348
-    FinishTime: 14281.883
-  - HorizontalInput: 0.9998902
-    StartTime: 14281.883
-    FinishTime: 14288.8346
-  - HorizontalInput: 0.9999027
-    StartTime: 14288.8346
-    FinishTime: 14294.835700000001
-  - HorizontalInput: 0.9999161
-    StartTime: 14294.835700000001
-    FinishTime: 14299.8358
-  - HorizontalInput: 0.9999252
-    StartTime: 14299.8358
-    FinishTime: 14306.8351
-  - HorizontalInput: 0.99993366
-    StartTime: 14306.8351
-    FinishTime: 14311.8358
-  - HorizontalInput: 0.99994147
-    StartTime: 14311.8358
-    FinishTime: 14317.834
-  - HorizontalInput: 0.99994767
-    StartTime: 14317.834
-    FinishTime: 14322.835700000001
-  - HorizontalInput: 0.9999537
-    StartTime: 14322.835700000001
-    FinishTime: 14328.8893
-  - HorizontalInput: 0.9999589
-    StartTime: 14328.8893
-    FinishTime: 14334.8356
-  - HorizontalInput: 0.9999639
-    StartTime: 14334.8356
-    FinishTime: 14340.2741
-  - HorizontalInput: 0.9999682
-    StartTime: 14340.2741
-    FinishTime: 14346.274000000001
-  - HorizontalInput: 0.99997157
-    StartTime: 14346.274000000001
-    FinishTime: 14352.389500000001
-  - HorizontalInput: 0.999975
-    StartTime: 14352.389500000001
-    FinishTime: 14357.2747
-  - HorizontalInput: 0.99997777
-    StartTime: 14357.2747
-    FinishTime: 14363.2738
-  - HorizontalInput: 0.9999802
-    StartTime: 14363.2738
-    FinishTime: 14369.2738
-  - HorizontalInput: 0.99998254
-    StartTime: 14369.2738
-    FinishTime: 14375.2747
-  - HorizontalInput: 0.99998486
-    StartTime: 14375.2747
-    FinishTime: 14381.273200000001
-  - HorizontalInput: 0.9999866
-    StartTime: 14381.273200000001
-    FinishTime: 14387.274300000001
-  - HorizontalInput: 0.9999881
-    StartTime: 14387.274300000001
-    FinishTime: 14396.2734
-  - HorizontalInput: 0.9999903
-    StartTime: 14396.2734
-    FinishTime: 14404.274000000001
-  - HorizontalInput: 0.99999183
-    StartTime: 14404.274000000001
-    FinishTime: 14409.788700000001
-  - HorizontalInput: 0.9999928
-    StartTime: 14409.788700000001
-    FinishTime: 14414.789700000001
-  - HorizontalInput: 0.99999356
-    StartTime: 14414.789700000001
-    FinishTime: 14420.7896
-  - HorizontalInput: 0.99999434
-    StartTime: 14420.7896
-    FinishTime: 14426.7885
-  - HorizontalInput: 0.99999493
-    StartTime: 14426.7885
-    FinishTime: 14432.7888
-  - HorizontalInput: 0.9999955
-    StartTime: 14432.7888
-    FinishTime: 14437.7886
-  - HorizontalInput: 0.99999607
-    StartTime: 14437.7886
-    FinishTime: 14443.787600000001
-  - HorizontalInput: 0.9999965
-    StartTime: 14443.787600000001
-    FinishTime: 14449.7885
-  - HorizontalInput: 0.9999969
-    StartTime: 14449.7885
-    FinishTime: 14454.789400000001
-  - HorizontalInput: 0.99999726
-    StartTime: 14454.789400000001
-    FinishTime: 14460.842
-  - HorizontalInput: 0.99999756
-    StartTime: 14460.842
-    FinishTime: 14466.841600000002
-  - HorizontalInput: 0.9999978
-    StartTime: 14466.841600000002
-    FinishTime: 14472.842
-  - HorizontalInput: 0.9999981
-    StartTime: 14472.842
-    FinishTime: 14477.842
-  - HorizontalInput: 0.9999983
-    StartTime: 14477.842
-    FinishTime: 14483.841400000001
-  - HorizontalInput: 0.99999845
-    StartTime: 14483.841400000001
-    FinishTime: 14489.8417
-  - HorizontalInput: 0.9999986
-    StartTime: 14489.8417
-    FinishTime: 14494.8423
-  - HorizontalInput: 0.99999875
-    StartTime: 14494.8423
-    FinishTime: 14500.843200000001
-  - HorizontalInput: 0.99999887
-    StartTime: 14500.843200000001
-    FinishTime: 14506.843
-  - HorizontalInput: 0.999999
-    StartTime: 14506.843
-    FinishTime: 14511.842400000001
-  - HorizontalInput: 0.9999991
-    StartTime: 14511.842400000001
-    FinishTime: 14517.8495
-  - HorizontalInput: 0.9999992
-    StartTime: 14517.8495
-    FinishTime: 14523.878
-  - HorizontalInput: 0.9999993
-    StartTime: 14523.878
-    FinishTime: 14528.8421
-  - HorizontalInput: 0.99999934
-    StartTime: 14528.8421
-    FinishTime: 14534.843
-  - HorizontalInput: 0.9999994
-    StartTime: 14534.843
-    FinishTime: 14540.8417
-  - HorizontalInput: 0.99999946
-    StartTime: 14540.8417
-    FinishTime: 14546.8417
-  - HorizontalInput: 0.9999995
-    StartTime: 14546.8417
-    FinishTime: 14551.842200000001
-  - HorizontalInput: 0.9999996
-    StartTime: 14551.842200000001
-    FinishTime: 14557.8421
-  - HorizontalInput: 0.99999964
-    StartTime: 14557.8421
-    FinishTime: 14562.843
-  - HorizontalInput: 0.9999997
-    StartTime: 14562.843
-    FinishTime: 14569.2576
-  - HorizontalInput: 0.99999976
-    StartTime: 14569.2576
-    FinishTime: 14969.8693
-  - HorizontalInput: 0.9999998
-    StartTime: 14969.8693
-    FinishTime: 15007.869700000001
-  - HorizontalInput: 0.9999999
-    StartTime: 15007.869700000001
-    FinishTime: 15450.7657
-  - HorizontalInput: 0.99999994
-    StartTime: 15450.7657
-    FinishTime: 15806.7875
-  - HorizontalInput: 0
-    StartTime: 15806.7875
-    FinishTime: 16189.837300000001
-  - HorizontalInput: -1
-    StartTime: 16189.837300000001
-    FinishTime: 18482.698200000003
-  - HorizontalInput: 0
-    StartTime: 18482.698200000003
-    FinishTime: 18687.7088
+    StartTime: 16614.6679
+    FinishTime: 16732.3516
   - HorizontalInput: 1
-    StartTime: 18687.7088
+    StartTime: 16732.3516
+    FinishTime: 17556.4901
+  - HorizontalInput: 0
+    StartTime: 17556.4901
+    FinishTime: 17656.941300000002
+  - HorizontalInput: -0.07316422
+    StartTime: 17656.941300000002
+    FinishTime: 17674.1821
+  - HorizontalInput: -0.18725988
+    StartTime: 17674.1821
+    FinishTime: 17690.5613
+  - HorizontalInput: -0.25370687
+    StartTime: 17690.5613
+    FinishTime: 17723.8593
+  - HorizontalInput: -0.3291219
+    StartTime: 17723.8593
+    FinishTime: 17740.0632
+  - HorizontalInput: -0.3493939
+    StartTime: 17740.0632
+    FinishTime: 17757.779000000002
+  - HorizontalInput: -0.3643063
+    StartTime: 17757.779000000002
+    FinishTime: 17773.7784
+  - HorizontalInput: -0.3736402
+    StartTime: 17773.7784
+    FinishTime: 17791.434400000002
+  - HorizontalInput: -0.38009828
+    StartTime: 17791.434400000002
+    FinishTime: 17825.5485
+  - HorizontalInput: -0.38703242
+    StartTime: 17825.5485
+    FinishTime: 17841.711
+  - HorizontalInput: -0.38890094
+    StartTime: 17841.711
+    FinishTime: 17858.8745
+  - HorizontalInput: -0.39015242
+    StartTime: 17858.8745
+    FinishTime: 17875.873600000003
+  - HorizontalInput: -0.39091933
+    StartTime: 17875.873600000003
+    FinishTime: 17893.0836
+  - HorizontalInput: -0.39144465
+    StartTime: 17893.0836
+    FinishTime: 17909.182
+  - HorizontalInput: -0.39180267
+    StartTime: 17909.182
+    FinishTime: 17942.478300000002
+  - HorizontalInput: -0.3921991
+    StartTime: 17942.478300000002
+    FinishTime: 17959.9175
+  - HorizontalInput: -0.39229697
+    StartTime: 17959.9175
+    FinishTime: 17977.143
+  - HorizontalInput: -0.39236867
+    StartTime: 17977.143
+    FinishTime: 17994.4618
+  - HorizontalInput: -0.39241433
+    StartTime: 17994.4618
+    FinishTime: 18010.8635
+  - HorizontalInput: -0.39244503
+    StartTime: 18010.8635
+    FinishTime: 18044.413500000002
+  - HorizontalInput: -0.39247823
+    StartTime: 18044.413500000002
+    FinishTime: 18061.5933
+  - HorizontalInput: -0.3924867
+    StartTime: 18061.5933
+    FinishTime: 18077.7995
+  - HorizontalInput: -0.3924927
+    StartTime: 18077.7995
+    FinishTime: 18095.3552
+  - HorizontalInput: -0.39249673
+    StartTime: 18095.3552
+    FinishTime: 18112.842500000002
+  - HorizontalInput: -0.39249906
+    StartTime: 18112.842500000002
+    FinishTime: 18129.2114
+  - HorizontalInput: -0.3925008
+    StartTime: 18129.2114
+    FinishTime: 18163.534200000002
+  - HorizontalInput: -0.39250264
+    StartTime: 18163.534200000002
+    FinishTime: 18180.6558
+  - HorizontalInput: -0.3925031
+    StartTime: 18180.6558
+    FinishTime: 18197.4311
+  - HorizontalInput: -0.39250344
+    StartTime: 18197.4311
+    FinishTime: 18213.5834
+  - HorizontalInput: -0.39250365
+    StartTime: 18213.5834
+    FinishTime: 18231.584600000002
+  - HorizontalInput: -0.3925038
+    StartTime: 18231.584600000002
+    FinishTime: 18264.887300000002
+  - HorizontalInput: -0.39250395
+    StartTime: 18264.887300000002
+    FinishTime: 18282.142900000003
+  - HorizontalInput: -0.39250398
+    StartTime: 18282.142900000003
+    FinishTime: 18298.5086
+  - HorizontalInput: -0.392504
+    StartTime: 18298.5086
+    FinishTime: 18315.7164
+  - HorizontalInput: -0.39250404
+    StartTime: 18315.7164
+    FinishTime: 18501.9575
+  - HorizontalInput: 0
+    StartTime: 18501.9575
+    FinishTime: 18619.7892
+  - HorizontalInput: 1
+    StartTime: 18619.7892
+    FinishTime: 19091.0399
+  - HorizontalInput: 0
+    StartTime: 19091.0399
     FinishTime: -1

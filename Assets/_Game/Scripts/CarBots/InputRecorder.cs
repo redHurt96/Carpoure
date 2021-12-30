@@ -31,7 +31,7 @@ namespace RoofRace.CarBots
             LevelStateMachine.Instance.LevelFailed += FinishRecord;
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             if (_state == State.Recorded)
                 RecordCarState();
