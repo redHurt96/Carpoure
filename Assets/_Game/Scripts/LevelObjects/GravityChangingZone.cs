@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace RoofRace.LevelObjects
 {
+
     public class GravityChangingZone : MonoBehaviour
     {
         [SerializeField] private GravityDirection _insideDirecton;

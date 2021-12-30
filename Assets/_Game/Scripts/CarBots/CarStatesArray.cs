@@ -1,64 +1,68 @@
-﻿using Sirenix.OdinInspector;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace RoofRace.CarBots
 {
     public class CarStatesArray : ScriptableObject
     {
-        public int StatesCount => _carStates.Length;
+        public Vector3 StartPosition;
 
-        [SerializeField] private CarState[] _carStates;
+        [SerializeField] private List<UserInput> _carStates = new List<UserInput>();
 
-        public void SetStates(CarState[] states) => _carStates = states;
-
-        public CarState GetByIndex(int index) => _carStates[index];
-
-        public CarState GetByTimeAndIndex(double timeSinceStart, int lastIndex, out int newIndex)
+        public void AddState(float inputDirection, double time)
         {
-            if (lastIndex == 0)
+            if (_carStates.Count == 0)
             {
-                newIndex = 1;
-                return _carStates[0];
+                AddNewState(inputDirection, time);
+                return;
             }
 
-            for (int i = lastIndex; i < _carStates.Length; i++)
+            UpdateLastState(inputDirection, time);
+        }
+
+        public float GetState(double time)
+        {
+            for (int i = 0; i < _carStates.Count; i++)
             {
-                if (_carStates[i].TimeSinceStart >= timeSinceStart)
+                UserInput state = _carStates[i];
+
+                if (state.StartTime < time && state.FinishTime > time)
                 {
-                    CarState previousState = _carStates[i - 1];
-                    CarState nextState = _carStates[i];
-
-                    double currentSubstactedTime = timeSinceStart - previousState.TimeSinceStart;
-                    double nextSubstactedTime = nextState.TimeSinceStart - previousState.TimeSinceStart;
-
-                    float timeLerp = (float)(currentSubstactedTime / nextSubstactedTime);
-
-                    newIndex = i;
-
-                    return new CarState
-                    {
-                        Position = Vector3.Lerp(previousState.Position, nextState.Position, timeLerp),
-                        Rotation = Quaternion.Lerp(previousState.Rotation, nextState.Rotation, timeLerp),
-                        WheelsRotation = previousState.WheelsRotation
-                    };
+                    Debug.Log($"Time = {time}, state {i}, {state.HorizontalInput}");
+                    return state.HorizontalInput;
                 }
             }
 
-            Debug.LogError($"There is no valid car state for time {timeSinceStart} and index {lastIndex}");
-            newIndex = 100000000;
-            return default;
+            Debug.Log($"Time = {time}, Return default value");
+            return 0;
+            //return _carStates.Find(x => x.StartTime < time && x.FinishTime > time).HorizontalInput;
         }
 
-        [Button]
-        private void RemoveAllMiddlePoints()
+        public float GetState(double time, ref int lastIndex)
         {
-            var newArray = new CarState[]
+            for (; lastIndex < _carStates.Count; lastIndex++)
             {
-                _carStates[0],
-                _carStates[_carStates.Length - 1]
-            };
+                var state = _carStates[lastIndex];
 
-            _carStates = newArray;
+                if (state.StartTime < time && time < state.FinishTime)
+                    return state.HorizontalInput;
+            }
+
+            return 0f;
+        }
+
+        private void AddNewState(float inputDirection, double time) =>
+            _carStates.Add(new UserInput(inputDirection, time));
+
+        private void UpdateLastState(float inputDirection, double time)
+        {
+            UserInput lastState = _carStates[_carStates.Count - 1];
+
+            if (lastState.HorizontalInput != inputDirection)
+            {
+                lastState.FinishTime = time;
+                _carStates.Add(new UserInput(inputDirection, time));
+            }
         }
     }
 }

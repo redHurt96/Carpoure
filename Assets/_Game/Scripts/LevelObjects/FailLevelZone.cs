@@ -6,7 +6,7 @@ namespace RoofRace.LevelObjects
     {
         private void OnTriggerEnter(Collider other)
         {
-            if (other.TryGetComponent<CarCollider>(out var carCollider))
+            if (other.TryGetComponent<CarCollider>(out var carCollider) && other.CompareTag(Tags.PLAYER))
                 LevelStateMachine.Instance.FailLevel();
         }
     }

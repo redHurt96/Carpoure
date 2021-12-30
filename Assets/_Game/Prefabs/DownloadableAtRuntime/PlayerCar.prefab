@@ -2152,7 +2152,7 @@ MonoBehaviour:
     CoastingDrag: 5
     Grip: 0.97
     Steer: 1.5
-    AddedGravity: 1
+    AddedGravity: {x: 0, y: 1, z: 0}
   m_VisualWheels:
   - {fileID: 5126884233521730603}
   - {fileID: 6891449520328348311}
@@ -2259,7 +2259,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7032843658353191263}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60605f4d4c5f40b40ba2da96cd05be40, type: 3}
   m_Name: 

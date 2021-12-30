@@ -2153,7 +2153,7 @@ MonoBehaviour:
     CoastingDrag: 5
     Grip: 0.97
     Steer: 1.5
-    AddedGravity: 1
+    AddedGravity: {x: 0, y: 1, z: 0}
   m_VisualWheels:
   - {fileID: 5126884233521730603}
   - {fileID: 6891449520328348311}
@@ -2291,12 +2291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f47d9f1ecec651449309ee2e0476f25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _car: {fileID: 7032843658353191256}
-  _wheels:
-  - {fileID: 2506593426701534879}
-  - {fileID: 7076994777235386511}
-  - {fileID: 8524836298514673062}
-  - {fileID: 6008646931992286131}
+  _input: {fileID: 8581324484353556780}
 --- !u!1 &7032843658422184209
 GameObject:
   m_ObjectHideFlags: 0

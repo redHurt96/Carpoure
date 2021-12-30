@@ -3,14 +3,7 @@ using UnityEngine;
 
 public class MobileInput : BaseInput
 {
-    private const float AUTO_ROTATION_TRESHHOLD = .02f;
-
-    [SerializeField] private float _rotationTreshhold = .1f;
-
-    private float _localRotation => transform.localRotation.y;
-    private bool _needRotateToOrigin => Mathf.Abs(_localRotation) > AUTO_ROTATION_TRESHHOLD;
-
-    private float _horizontalDirection
+    public float HorizontalDirection
     {
         get
         {
@@ -25,13 +18,20 @@ public class MobileInput : BaseInput
         }
     }
 
+    private const float AUTO_ROTATION_TRESHHOLD = .04f;
+
+    [SerializeField] private float _rotationTreshhold = .1f;
+
+    private float _localRotation => transform.localRotation.y;
+    private bool _needRotateToOrigin => Mathf.Abs(_localRotation) > AUTO_ROTATION_TRESHHOLD;
+
     public override InputData GenerateInput()
     {
         return new InputData
         {
             Accelerate = true,
             Brake = false,
-            TurnInput = _horizontalDirection
+            TurnInput = HorizontalDirection
         };
     }
 

@@ -1,14 +1,12 @@
 #if UNITY_EDITOR
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
 namespace RoofRace.CarBots
 {
-    public class TrailRecorder : MonoBehaviour
+    public class InputRecorder : MonoBehaviour
     {
         private enum State
         {
@@ -17,15 +15,17 @@ namespace RoofRace.CarBots
             Saved
         }
 
-        [SerializeField] private Transform _car;
-        [SerializeField] private Transform[] _wheels;
+        [SerializeField] private MobileInput _input;
 
         private State _state;
-        private List<CarState> _carStates;
         private DateTime _startTime;
+
+        private CarStatesArray _asset;
 
         private void Awake()
         {
+            CreateAsset();
+
             LevelStateMachine.Instance.LevelStarted += StartRecord;
             LevelStateMachine.Instance.LevelFinished += FinishRecord;
             LevelStateMachine.Instance.LevelFailed += FinishRecord;
@@ -47,27 +47,20 @@ namespace RoofRace.CarBots
             }
         }
 
+        private void CreateAsset()
+        {
+            _asset = ScriptableObject.CreateInstance<CarStatesArray>();
+            _asset.StartPosition = transform.position;
+        }
+
         private void StartRecord()
         {
             _state = State.Recorded;
-            _carStates = new List<CarState>();
             _startTime = DateTime.Now;
         }
 
-        private void RecordCarState()
-        {
-            var state = new CarState
-            {
-                Position = _car.position,
-                Rotation = _car.rotation,
-                WheelsRotation = _wheels
-                    .Select(x => x.rotation)
-                    .ToArray(),
-                TimeSinceStart = DateTime.Now.Subtract(_startTime).TotalMilliseconds
-            };
-
-            _carStates.Add(state);
-        }
+        private void RecordCarState() => 
+            _asset.AddState(_input.HorizontalDirection, DateTime.Now.Subtract(_startTime).TotalMilliseconds);
 
         private void FinishRecord()
         {
@@ -80,10 +73,7 @@ namespace RoofRace.CarBots
 
         private void Save()
         {
-            var asset = ScriptableObject.CreateInstance<CarStatesArray>();
-            asset.SetStates(_carStates.ToArray());
-
-            AssetDatabase.CreateAsset(asset, "Assets/_Game/CarBots/StatesArray.asset");
+            AssetDatabase.CreateAsset(_asset, "Assets/_Game/CarBots/StatesArray.asset");
             AssetDatabase.SaveAssets();
         }
     }

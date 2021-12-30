@@ -50,7 +50,7 @@ namespace KartGame.KartSystems
             public float Steer;
 
             [Tooltip("Additional gravity for when the kart is in the air.")]
-            public float AddedGravity;
+            public Vector3 AddedGravity;
 
             // allow for stat adding for powerups.
             public static Stats operator +(Stats a, Stats b)
@@ -87,7 +87,7 @@ namespace KartGame.KartSystems
             Steer               = 5f,
             CoastingDrag        = 4f,
             Grip                = .95f,
-            AddedGravity        = 1f,
+            AddedGravity        = Vector3.up,
         };
 
         [Header("Vehicle Visual")] 
@@ -314,7 +314,8 @@ namespace KartGame.KartSystems
             {
                 MoveVehicle(Input.Accelerate, Input.Brake, Input.TurnInput);
             }
-            //GroundAirbourne();
+
+            AddGravity();
 
             m_PreviousGroundPercent = GroundPercent;
 
@@ -362,13 +363,9 @@ namespace KartGame.KartSystems
             m_FinalStats.Grip = Mathf.Clamp(m_FinalStats.Grip, 0, 1);
         }
 
-        void GroundAirbourne()
+        private void AddGravity()
         {
-            // while in the air, fall faster
-            if (AirPercent >= 1)
-            {
-                Rigidbody.velocity += Physics.gravity * Time.fixedDeltaTime * m_FinalStats.AddedGravity;
-            }
+            Rigidbody.velocity += m_FinalStats.AddedGravity * Time.fixedDeltaTime;
         }
 
         public void Reset()
