@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace RoofRace.LevelObjects
 {
+    [RequireComponent(typeof(Collider))]
     public class DestructibleObject : MonoBehaviour
     {
         [SerializeField] private float _explosionForce = 50f;
@@ -11,8 +12,8 @@ namespace RoofRace.LevelObjects
         {
             if (other.CompareTag(Tags.PLAYER))
             {
-                Vector3 point = other.ClosestPoint(transform.position);
-                MoveChildObjects(point);
+                //Vector3 point = other.ClosestPoint(transform.position);
+                MoveChildObjects(other.transform.position);
             }
         }
 
