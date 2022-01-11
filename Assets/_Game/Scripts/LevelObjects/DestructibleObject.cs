@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace RoofRace.LevelObjects
@@ -25,6 +26,22 @@ namespace RoofRace.LevelObjects
 
                 rigidbody.isKinematic = false;
                 rigidbody.AddExplosionForce(_explosionForce, from, _radius);
+            }
+        }
+
+        [Button]
+        private void PrepareChildObjects()
+        {
+            foreach (Transform child in transform)
+            {
+                if (child.GetComponent<MeshCollider>() == null)
+                    child.gameObject.AddComponent<MeshCollider>();
+
+                if (child.GetComponent<Rigidbody>() == null)
+                    child.gameObject.AddComponent<Rigidbody>();
+
+                child.GetComponent<MeshCollider>().convex = true;
+                child.GetComponent<Rigidbody>().isKinematic = true;
             }
         }
     }
