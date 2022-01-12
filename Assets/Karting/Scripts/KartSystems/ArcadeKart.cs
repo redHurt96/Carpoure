@@ -1,7 +1,5 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine.VFX;
 
 namespace KartGame.KartSystems
 {
@@ -170,7 +168,6 @@ namespace KartGame.KartSystems
         readonly List<(GameObject trailRoot, WheelCollider wheel, TrailRenderer trail)> m_DriftTrailInstances = new List<(GameObject, WheelCollider, TrailRenderer)>();
         readonly List<(WheelCollider wheel, float horizontalOffset, float rotation, ParticleSystem sparks)> m_DriftSparkInstances = new List<(WheelCollider, float, float, ParticleSystem)>();
 
-        // can the kart move?
         bool m_CanMove = true;
         List<StatPowerup> m_ActivePowerupList = new List<StatPowerup>();
         ArcadeKart.Stats m_FinalStats;
@@ -288,11 +285,8 @@ namespace KartGame.KartSystems
             UpdateSuspensionParams(RearRightWheel);
 
             GatherInputs();
-
-            // apply our powerups to create our finalStats
             TickPowerups();
 
-            // apply our physics properties
             Rigidbody.centerOfMass = transform.InverseTransformPoint(CenterOfMass.position);
 
             int groundedCount = 0;
@@ -305,17 +299,13 @@ namespace KartGame.KartSystems
             if (RearRightWheel.isGrounded && RearRightWheel.GetGroundHit(out hit))
                 groundedCount++;
 
-            // calculate how grounded and airborne we are
             GroundPercent = (float) groundedCount / 4.0f;
             AirPercent = 1 - GroundPercent;
 
-            // apply vehicle physics
             if (m_CanMove)
-            {
                 MoveVehicle(Input.Accelerate, Input.Brake, Input.TurnInput);
-            }
 
-            AddGravity();
+            //AddGravity();
 
             m_PreviousGroundPercent = GroundPercent;
 
