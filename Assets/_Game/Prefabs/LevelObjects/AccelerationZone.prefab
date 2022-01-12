@@ -111,8 +111,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _powerup:
     modifiers:
-      TopSpeed: 70
-      Acceleration: 70
+      TopSpeed: 10
+      Acceleration: 10
       ReverseSpeed: 0
       ReverseAcceleration: 0
       AccelerationCurve: 0.2
@@ -120,7 +120,7 @@ MonoBehaviour:
       CoastingDrag: 0
       Grip: 0
       Steer: 0
-      AddedGravity: 0
+      AddedGravity: {x: 0, y: 0, z: 0}
     PowerUpID: 1
     ElapsedTime: 0
     MaxTime: 1.2
