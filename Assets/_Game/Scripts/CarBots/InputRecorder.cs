@@ -15,7 +15,7 @@ namespace RoofRace.CarBots
             Saved
         }
 
-        [SerializeField] private MobileInput _input;
+        [SerializeField] private ClampedMobileInput _input;
 
         private State _state;
         private DateTime _startTime;
