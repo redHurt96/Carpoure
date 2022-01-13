@@ -79220,7 +79220,6 @@ Transform:
   - {fileID: 8220855300872399730}
   - {fileID: 4531339083614108046}
   - {fileID: 8467934768960312672}
-  - {fileID: 8293828130937156637}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -90040,86 +90039,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3306628089515879659}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &3825610473233856490
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 8201130990834501780}
-    m_Modifications:
-    - target: {fileID: 5048206199845585911, guid: 802c7b5136fe53c4abd817f3a9dc0f21,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 129
-      objectReference: {fileID: 0}
-    - target: {fileID: 5048206199845585911, guid: 802c7b5136fe53c4abd817f3a9dc0f21,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 62.33554
-      objectReference: {fileID: 0}
-    - target: {fileID: 5048206199845585911, guid: 802c7b5136fe53c4abd817f3a9dc0f21,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 41
-      objectReference: {fileID: 0}
-    - target: {fileID: 5048206199845585911, guid: 802c7b5136fe53c4abd817f3a9dc0f21,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 186.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5048206199845585911, guid: 802c7b5136fe53c4abd817f3a9dc0f21,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -92.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 5048206199845585911, guid: 802c7b5136fe53c4abd817f3a9dc0f21,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5048206199845585911, guid: 802c7b5136fe53c4abd817f3a9dc0f21,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5048206199845585911, guid: 802c7b5136fe53c4abd817f3a9dc0f21,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5048206199845585911, guid: 802c7b5136fe53c4abd817f3a9dc0f21,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5048206199845585911, guid: 802c7b5136fe53c4abd817f3a9dc0f21,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5048206199845585911, guid: 802c7b5136fe53c4abd817f3a9dc0f21,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5048206199845585911, guid: 802c7b5136fe53c4abd817f3a9dc0f21,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5048206199845585915, guid: 802c7b5136fe53c4abd817f3a9dc0f21,
-        type: 3}
-      propertyPath: m_Name
-      value: GravityChangingZone (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 802c7b5136fe53c4abd817f3a9dc0f21, type: 3}
---- !u!4 &8293828130937156637 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5048206199845585911, guid: 802c7b5136fe53c4abd817f3a9dc0f21,
-    type: 3}
-  m_PrefabInstance: {fileID: 3825610473233856490}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4723583446736834943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -90641,6 +90560,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911347996410490362, guid: 524c8122e378e99418fe23ce74bee856,
+        type: 3}
+      propertyPath: _powerup.modifiers.TopSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911347996410490362, guid: 524c8122e378e99418fe23ce74bee856,
+        type: 3}
+      propertyPath: _powerup.modifiers.Acceleration
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1911347996410490365, guid: 524c8122e378e99418fe23ce74bee856,
         type: 3}
