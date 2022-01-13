@@ -305,7 +305,7 @@ namespace KartGame.KartSystems
             if (m_CanMove)
                 MoveVehicle(Input.Accelerate, Input.Brake, Input.TurnInput);
 
-            //AddGravity();
+            AddGravity();
 
             m_PreviousGroundPercent = GroundPercent;
 
