@@ -384,8 +384,17 @@ namespace KartGame.KartSystems
             }
         }
 
-        void OnCollisionEnter(Collision collision) => m_HasCollision = true;
-        void OnCollisionExit(Collision collision) => m_HasCollision = false;
+        private void OnCollisionEnter(Collision collision)
+        {
+            Debug.Log("Collision");
+            m_HasCollision = true;
+        }
+
+        private void OnCollisionExit(Collision collision)
+        {
+            Debug.Log("Collision exit ");
+            m_HasCollision = false;
+        }
 
         void OnCollisionStay(Collision collision)
         {

@@ -15,8 +15,8 @@ namespace RoofRace.Physics
 
         private static readonly Dictionary<GravityDirection, Vector3> DIRECTIONS = new Dictionary<GravityDirection, Vector3>
         {
-            { GravityDirection.Left, Vector3.left * GRAVITY_FORCE },
-            { GravityDirection.Right, Vector3.right * GRAVITY_FORCE },
+            { GravityDirection.Left, Vector3.left * GRAVITY_FORCE * 2 },
+            { GravityDirection.Right, Vector3.right * GRAVITY_FORCE * 2 },
             { GravityDirection.Default, Vector3.down * GRAVITY_FORCE }
         };
 
