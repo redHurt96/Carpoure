@@ -1,7 +1,6 @@
 ﻿using Cinemachine;
-using RoofRace.Physics;
+using RoofRace.Car.WithLocalGravity;
 using Sirenix.OdinInspector;
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -11,14 +10,16 @@ namespace RoofRace.Car
     public class GroundedCameraShaking : MonoBehaviour
     {
         [SerializeField] private GroundedStateIndicator _indicator;
+        [SerializeField] private LocalGravityApplier _localGravityApplier;
 
         private CinemachineImpulseSource _impulseSource;
+
         private bool _enabled;
 
         private void Awake()
         {
             _impulseSource = GetComponent<CinemachineImpulseSource>();
-            
+
             LevelStateMachine.Instance.LevelStarted += Enable;
             _indicator.StateChanged += ShakeIfGrounded;
         }
@@ -42,7 +43,7 @@ namespace RoofRace.Car
 
         private void ShakeIfGrounded(bool isGrounded)
         {
-            if (isGrounded && Gravity.Value.y < 0 && _enabled)
+            if (isGrounded && _localGravityApplier.Value.y < 0 && _enabled)
                 Shake();
         }
 

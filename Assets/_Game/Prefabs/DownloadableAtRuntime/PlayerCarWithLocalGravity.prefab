@@ -794,7 +794,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &9123549229664771251
 Transform:
   m_ObjectHideFlags: 0
@@ -900,6 +900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _indicator: {fileID: 1471027976}
+  _localGravityApplier: {fileID: 1483305965}
 --- !u!1 &3196168528127094733
 GameObject:
   m_ObjectHideFlags: 0
@@ -2083,9 +2084,11 @@ GameObject:
   - component: {fileID: 7032843658353191258}
   - component: {fileID: 7032843658353191262}
   - component: {fileID: 1471027976}
+  - component: {fileID: 8840759492524149636}
   - component: {fileID: 1471027982}
-  - component: {fileID: 1483305961}
   - component: {fileID: 1483305965}
+  - component: {fileID: 9093785190575023221}
+  - component: {fileID: 6691583468872134336}
   m_Layer: 2
   m_Name: PlayerCarWithLocalGravity
   m_TagString: Player
@@ -2151,7 +2154,7 @@ MonoBehaviour:
     CoastingDrag: 5
     Grip: 0.97
     Steer: 1.5
-    AddedGravity: {x: 0, y: -9.8, z: 0}
+    AddedGravity: {x: 0, y: 0, z: 0}
   m_VisualWheels:
   - {fileID: 5126884233521730603}
   - {fileID: 6891449520328348311}
@@ -2187,6 +2190,17 @@ MonoBehaviour:
   GroundLayers:
     serializedVersion: 2
     m_Bits: 32563
+  FinalStats:
+    TopSpeed: 0
+    Acceleration: 0
+    ReverseSpeed: 0
+    ReverseAcceleration: 0
+    AccelerationCurve: 0
+    Braking: 0
+    CoastingDrag: 0
+    Grip: 0
+    Steer: 0
+    AddedGravity: {x: 0, y: 0, z: 0}
 --- !u!114 &7032843658353191262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2226,6 +2240,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dc9d9fc3cfc5a143958dfa31d2d3a38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8840759492524149636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7032843658353191263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15259831af006040b53d16adad0f360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _wheelColliders:
+  - {fileID: 7032843659060416038}
+  - {fileID: 7032843658422184211}
+  - {fileID: 7032843657975248864}
+  - {fileID: 7032843659019879325}
 --- !u!114 &1471027982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2236,18 +2267,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0282eca06e007b743966b411403ab860, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1483305961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7032843658353191263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f292ffb948323c49ac31e54ff737ea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1483305965
@@ -2262,12 +2281,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83cea8f3d9a0883498cfdf7e80420220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _normalCalculator: {fileID: 8840759492524149636}
   _kart: {fileID: 7032843658353191258}
-  _wheelColliders:
-  - {fileID: 7032843659060416038}
-  - {fileID: 7032843658422184211}
-  - {fileID: 7032843657975248864}
-  - {fileID: 7032843659019879325}
+  _gravityForce: 20
+  _defaultGravityDirection: {x: 0, y: 0, z: 0}
+  _angleTreshhold: 20
+--- !u!114 &9093785190575023221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7032843658353191263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5da06f6fb37ec8248822f5825f61bfad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rotationTreshhold: 0.2
+--- !u!114 &6691583468872134336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7032843658353191263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3349ec9c042ec9641af35bb66d695cdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _kart: {fileID: 7032843658353191258}
 --- !u!1 &7032843658422184209
 GameObject:
   m_ObjectHideFlags: 0
@@ -2388,6 +2432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Kart: {fileID: 7032843658353191258}
+  LocalGravityApplier: {fileID: 1483305965}
 --- !u!1 &7032843659019879315
 GameObject:
   m_ObjectHideFlags: 0

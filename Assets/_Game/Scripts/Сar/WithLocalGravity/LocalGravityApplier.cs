@@ -1,55 +1,46 @@
 using KartGame.KartSystems;
-using System.Collections.Generic;
+using RH.Utilities.Attributes;
 using UnityEngine;
 
 namespace RoofRace.Car.WithLocalGravity
 {
     public class LocalGravityApplier : MonoBehaviour
     {
-        public Vector3 Value { get; private set; }
+        public Vector3 Value => _normalCalculator.Value;
 
+        [SerializeField] private GroundNormalCalculator _normalCalculator;
         [SerializeField] private ArcadeKart _kart;
-        [SerializeField] private WheelCollider[] _wheelColliders;
 
         [Space]
         [SerializeField] private float _gravityForce;
 
+        [Header("Must be readonly")]
+        [SerializeField] private Vector3 _defaultGravityDirection = Vector3.zero;
+        [SerializeField] private float _angleTreshhold;
+
+        private bool _angleBigEnoughToApplyGravity => Mathf.Abs(Vector3.Angle(Value, Vector3.up)) > _angleTreshhold;
+
         private void FixedUpdate()
         {
-            CalculateGravity();
             ApplyGravity();
-            //DrawDebugLine();
+            DrawDebugLine();
         }
 
-        private void CalculateGravity()
-        {
-            List<Vector3> normals = new List<Vector3>();
-            Vector3 sum = Vector3.zero;
-
-            foreach (WheelCollider wheel in _wheelColliders)
-            {
-                if (wheel.GetGroundHit(out WheelHit hit))
-                {
-                    normals.Add(hit.normal);
-                    sum += hit.normal;
-                }
-            }
-
-            if (normals.Count > 0)
-                Value = sum / normals.Count;
-            else
-                Value = sum;
-        }
+        public void ApplyDefaultDirection(Vector3 value) => _defaultGravityDirection = value;
 
         private void ApplyGravity()
         {
-            if (Value != Vector3.zero)
-                _kart.baseStats.AddedGravity = -Value.normalized * _gravityForce;
+            if (_angleBigEnoughToApplyGravity)
+                ApplyGravity(-Value.normalized);
+            else if (_defaultGravityDirection != Vector3.zero)
+                ApplyGravity(_defaultGravityDirection);
+            else
+                ApplyGravity(Vector3.zero);
         }
 
-        private void DrawDebugLine()
-        {
-            Debug.DrawLine(transform.position, transform.position + Value * 3f, Color.red, 10f);
-        }
+        private void ApplyGravity(Vector3 direction) => _kart.baseStats.AddedGravity = direction * _gravityForce;
+
+        private void DrawDebugLine() => 
+            Debug.DrawLine(transform.position, transform.position + Value * 3f, Color.red, 3f);
     }
 }

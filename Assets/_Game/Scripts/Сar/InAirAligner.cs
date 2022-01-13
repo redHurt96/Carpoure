@@ -1,4 +1,4 @@
-using RoofRace.Physics;
+using RoofRace.Car.WithLocalGravity;
 using UnityEngine;
 
 namespace RoofRace.Car
@@ -6,6 +6,8 @@ namespace RoofRace.Car
     [RequireComponent(typeof(InAirTimer))]
     public class InAirAligner : MonoBehaviour
     {
+        [SerializeField] private LocalGravityApplier _localGravityApplier;
+
         [SerializeField] private float _timeBeforeAlign = .2f;
         [SerializeField] private float _smoothValue = .75f;
 
@@ -27,7 +29,7 @@ namespace RoofRace.Car
         private void FixedUpdate()
         {
             if (_timer.Value > _timeBeforeAlign && _isTrasking)
-                transform.up = Vector3.LerpUnclamped(transform.up, -Gravity.Value.normalized, _smoothValue);
+                transform.up = Vector3.LerpUnclamped(transform.up, -_localGravityApplier.Value.normalized, _smoothValue);
         }
     }
 }

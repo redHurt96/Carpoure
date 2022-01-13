@@ -74,7 +74,7 @@ namespace KartGame.KartSystems
         public float AirPercent    { get; private set; }
         public float GroundPercent { get; private set; }
 
-        public ArcadeKart.Stats baseStats = new ArcadeKart.Stats
+        public Stats baseStats = new Stats
         {
             TopSpeed            = 10f,
             Acceleration        = 5f,
@@ -170,7 +170,7 @@ namespace KartGame.KartSystems
 
         bool m_CanMove = true;
         List<StatPowerup> m_ActivePowerupList = new List<StatPowerup>();
-        ArcadeKart.Stats m_FinalStats;
+        public Stats FinalStats;
 
         Quaternion m_LastValidRotation;
         Vector3 m_LastValidPosition;
@@ -180,7 +180,7 @@ namespace KartGame.KartSystems
 
         public void AddPowerup(StatPowerup statPowerup) => m_ActivePowerupList.Add(statPowerup);
         public void SetCanMove(bool move) => m_CanMove = move;
-        public float GetMaxSpeed() => Mathf.Max(m_FinalStats.TopSpeed, m_FinalStats.ReverseSpeed);
+        public float GetMaxSpeed() => Mathf.Max(FinalStats.TopSpeed, FinalStats.ReverseSpeed);
 
         private void ActivateDriftVFX(bool active)
         {
@@ -347,15 +347,15 @@ namespace KartGame.KartSystems
             }
 
             // add powerups to our final stats
-            m_FinalStats = baseStats + powerups;
+            FinalStats = baseStats + powerups;
 
             // clamp values in finalstats
-            m_FinalStats.Grip = Mathf.Clamp(m_FinalStats.Grip, 0, 1);
+            FinalStats.Grip = Mathf.Clamp(FinalStats.Grip, 0, 1);
         }
 
         private void AddGravity()
         {
-            Rigidbody.velocity += m_FinalStats.AddedGravity * Time.fixedDeltaTime;
+            Rigidbody.velocity += FinalStats.AddedGravity * Time.fixedDeltaTime;
         }
 
         public void Reset()
@@ -373,7 +373,7 @@ namespace KartGame.KartSystems
                 if (Mathf.Abs(dot) > 0.1f)
                 {
                     float speed = Rigidbody.velocity.magnitude;
-                    return dot < 0 ? -(speed / m_FinalStats.ReverseSpeed) : (speed / m_FinalStats.TopSpeed);
+                    return dot < 0 ? -(speed / FinalStats.ReverseSpeed) : (speed / FinalStats.TopSpeed);
                 }
                 return 0f;
             }
@@ -412,24 +412,24 @@ namespace KartGame.KartSystems
             bool localVelDirectionIsFwd = localVel.z >= 0;
 
             // use the max speed for the direction we are going--forward or reverse.
-            float maxSpeed = localVelDirectionIsFwd ? m_FinalStats.TopSpeed : m_FinalStats.ReverseSpeed;
-            float accelPower = accelDirectionIsFwd ? m_FinalStats.Acceleration : m_FinalStats.ReverseAcceleration;
+            float maxSpeed = localVelDirectionIsFwd ? FinalStats.TopSpeed : FinalStats.ReverseSpeed;
+            float accelPower = accelDirectionIsFwd ? FinalStats.Acceleration : FinalStats.ReverseAcceleration;
 
             float currentSpeed = Rigidbody.velocity.magnitude;
             float accelRampT = currentSpeed / maxSpeed;
-            float multipliedAccelerationCurve = m_FinalStats.AccelerationCurve * accelerationCurveCoeff;
+            float multipliedAccelerationCurve = FinalStats.AccelerationCurve * accelerationCurveCoeff;
             float accelRamp = Mathf.Lerp(multipliedAccelerationCurve, 1, accelRampT * accelRampT);
 
             bool isBraking = (localVelDirectionIsFwd && brake) || (!localVelDirectionIsFwd && accelerate);
 
             // if we are braking (moving reverse to where we are going)
             // use the braking accleration instead
-            float finalAccelPower = isBraking ? m_FinalStats.Braking : accelPower;
+            float finalAccelPower = isBraking ? FinalStats.Braking : accelPower;
 
             float finalAcceleration = finalAccelPower * accelRamp;
 
             // apply inputs to forward/backward
-            float turningPower = IsDrifting ? m_DriftTurningPower : turnInput * m_FinalStats.Steer;
+            float turningPower = IsDrifting ? m_DriftTurningPower : turnInput * FinalStats.Steer;
 
             Quaternion turnAngle = Quaternion.AngleAxis(turningPower, transform.up);
             Vector3 fwd = turnAngle * transform.forward;
@@ -454,7 +454,7 @@ namespace KartGame.KartSystems
             // coasting is when we aren't touching accelerate
             if (Mathf.Abs(accelInput) < k_NullInput && GroundPercent > 0.0f)
             {
-                newVelocity = Vector3.MoveTowards(newVelocity, new Vector3(0, Rigidbody.velocity.y, 0), Time.fixedDeltaTime * m_FinalStats.CoastingDrag);
+                newVelocity = Vector3.MoveTowards(newVelocity, new Vector3(0, Rigidbody.velocity.y, 0), Time.fixedDeltaTime * FinalStats.CoastingDrag);
             }
 
             Rigidbody.velocity = newVelocity;
@@ -520,7 +520,7 @@ namespace KartGame.KartSystems
                         m_DriftTurningPower = Mathf.MoveTowards(m_DriftTurningPower, 0.0f, Mathf.Clamp01(DriftDampening * Time.fixedDeltaTime));
 
                     // Update the turning power based on input
-                    float driftMaxSteerValue = m_FinalStats.Steer + DriftAdditionalSteer;
+                    float driftMaxSteerValue = FinalStats.Steer + DriftAdditionalSteer;
                     m_DriftTurningPower = Mathf.Clamp(m_DriftTurningPower + (turnInput * Mathf.Clamp01(DriftControl * Time.fixedDeltaTime)), -driftMaxSteerValue, driftMaxSteerValue);
 
                     bool facingVelocity = Vector3.Dot(Rigidbody.velocity.normalized, transform.forward * Mathf.Sign(accelInput)) > Mathf.Cos(MinAngleToFinishDrift * Mathf.Deg2Rad);
@@ -537,7 +537,7 @@ namespace KartGame.KartSystems
                     {
                         // No Input, and car aligned with speed direction => Stop the drift
                         IsDrifting = false;
-                        m_CurrentGrip = m_FinalStats.Grip;
+                        m_CurrentGrip = FinalStats.Grip;
                     }
 
                 }
