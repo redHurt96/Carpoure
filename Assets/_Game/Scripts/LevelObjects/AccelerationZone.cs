@@ -1,13 +1,17 @@
 using KartGame.KartSystems;
 using UnityEngine;
 
-public class AccelerationZone : MonoBehaviour
+namespace RoofRace.LevelObjects
 {
-    [SerializeField] private ArcadeKart.StatPowerup _powerup;
-
-    private void OnTriggerEnter(Collider other)
+    [RequireComponent(typeof(Collider))]
+    public class AccelerationZone : MonoBehaviour
     {
-        if (other.TryGetComponent<CarCollider>(out var carCollider))
-            carCollider.Kart.AddPowerup(_powerup);
+        [SerializeField] private ArcadeKart.StatPowerup _powerup;
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.TryGetComponent<CarCollider>(out var carCollider))
+                carCollider.Kart.AddPowerup(_powerup);
+        }
     }
 }

@@ -2,6 +2,7 @@
 
 namespace RoofRace.Collectables
 {
+    [RequireComponent(typeof(Collider))]
     internal class CollectableObject : MonoBehaviour
     {
         public int Value => _value;
