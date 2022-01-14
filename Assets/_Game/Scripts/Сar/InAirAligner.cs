@@ -18,6 +18,8 @@ namespace RoofRace.Car
             if (_timer.Value > _timeBeforeAlign && !_isAlligned)
             {
                 transform.up = -Gravity.Value.normalized;
+                GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+
                 _isAlligned = true;
             }
             else if (_timer.Value < _timeBeforeAlign)
