@@ -9,8 +9,7 @@ namespace RoofRace.LevelObjects
         [SerializeField] private GameObject _origin;
         [SerializeField] private Transform _broken;
 
-        [SerializeField] private float _explosionForce = 50f;
-        [SerializeField] private float _radius = 5f;
+        [SerializeField] private float _explosionForce = 5f;
 
         private void OnTriggerEnter(Collider other)
         {
@@ -20,12 +19,21 @@ namespace RoofRace.LevelObjects
 
         private void Blast(Vector3 from)
         {
-            Destroy(_origin);
-
+            DestroyOrigin();
             _broken.gameObject.SetActive(true);
+            PushChildren(from);
+        }
 
+        private void PushChildren(Vector3 @from)
+        {
             foreach (Transform child in _broken)
-                PushChild(from, child);
+                PushChild(@from, child);
+        }
+
+        private void DestroyOrigin()
+        {
+            if (_origin != null)
+                Destroy(_origin);
         }
 
         private void PushChild(Vector3 from, Transform child)
@@ -33,7 +41,7 @@ namespace RoofRace.LevelObjects
             Rigidbody rigidbody = child.GetComponent<Rigidbody>();
 
             rigidbody.isKinematic = false;
-            rigidbody.AddExplosionForce(_explosionForce, from, _radius);
+            rigidbody.AddForce((rigidbody.position - from).normalized * _explosionForce, ForceMode.Impulse);
         }
 
         [Button]
