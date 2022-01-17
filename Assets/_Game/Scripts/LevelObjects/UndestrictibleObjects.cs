@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Sirenix.OdinInspector;
+using UnityEngine;
 
 namespace RoofRace.LevelObjects
 {
@@ -14,5 +15,31 @@ namespace RoofRace.LevelObjects
                 _explosion.Play();
             }
         }
+
+        #region EDITOR TOOLS
+#if UNITY_EDITOR
+
+        [Button]
+        private void Prepare()
+        {
+            PrepareCollider();
+            PrepareFx();
+        }
+
+        [Button]
+        private void PrepareFx()
+        {
+            _explosion = Instantiate(Resources.Load("BigExplosion") as GameObject, transform)
+                            .GetComponent<ParticleSystem>();
+        }
+
+        private void PrepareCollider()
+        {
+            if (GetComponent<Collider>() == null)
+                gameObject.AddComponent<MeshCollider>();
+        }
+
+#endif
+        #endregion
     }
 }
