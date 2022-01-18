@@ -4,4 +4,5 @@ using UnityEngine;
 public class CarCollider : MonoBehaviour
 {
     public ArcadeKart Kart;
+    public MobileInput Input;
 }

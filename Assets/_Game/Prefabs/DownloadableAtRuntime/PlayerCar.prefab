@@ -2264,7 +2264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60605f4d4c5f40b40ba2da96cd05be40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeBeforeAlign: 0.5
+  _timeBeforeAlign: 1.3
 --- !u!114 &7658504756061743118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2398,6 +2398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Kart: {fileID: 7032843658353191258}
+  Input: {fileID: 8581324484353556780}
 --- !u!1 &7032843659019879315
 GameObject:
   m_ObjectHideFlags: 0

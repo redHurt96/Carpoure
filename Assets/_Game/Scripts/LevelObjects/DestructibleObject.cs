@@ -10,6 +10,7 @@ namespace RoofRace.LevelObjects
         [SerializeField] private Transform _broken;
 
         [SerializeField] private float _explosionForce = 5f;
+        [SerializeField] private float _randomInfluence = .2f;
 
         private void OnTriggerEnter(Collider other)
         {
@@ -43,11 +44,12 @@ namespace RoofRace.LevelObjects
             Rigidbody rigidbody = child.GetComponent<Rigidbody>();
 
             rigidbody.isKinematic = false;
-            rigidbody.AddForce(((child.position - from).normalized + Random.insideUnitSphere) * _explosionForce, ForceMode.Impulse);
+            rigidbody.AddForce(((child.position - from).normalized + Random.insideUnitSphere * _randomInfluence) * _explosionForce, ForceMode.Impulse);
         }
 
         #region EDITOR TOOLS
 #if UNITY_EDITOR
+
         [Button]
         private void Prepare()
         {
@@ -94,13 +96,14 @@ namespace RoofRace.LevelObjects
 
             MeshCollider collider = child.GetComponent<MeshCollider>();
             collider.convex = true;
-            collider.isTrigger = true;
+            collider.isTrigger = false;
 
             child.GetComponent<Rigidbody>().isKinematic = true;
         }
 
         [Button]
         private void ShowBroken() => _broken.gameObject.SetActive(true);
+
 #endif
         #endregion
     }

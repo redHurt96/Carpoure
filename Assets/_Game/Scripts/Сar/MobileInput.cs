@@ -11,12 +11,14 @@ public class MobileInput : BaseInput
 
             if (direction != 0f && CanRotateAtDirection(direction))
                 return direction;
-            else if (Mathf.Approximately(direction, 0f) && _needRotateToOrigin)
+            if (Mathf.Approximately(direction, 0f) && _needRotateToOrigin)
                 return -Mathf.Sign(_localRotation);
-            else
-                return 0f;
+
+            return 0f;
         }
     }
+
+    public float RotationTreshhold => _rotationTreshhold;
 
     private const float AUTO_ROTATION_TRESHHOLD = .04f;
 
@@ -34,6 +36,8 @@ public class MobileInput : BaseInput
             TurnInput = HorizontalDirection
         };
     }
+
+    public void ChangeRotationTreshhold(float value) => _rotationTreshhold = value;
 
     private bool CanRotateAtDirection(float direction) =>
         (direction > 0f && _localRotation < _rotationTreshhold) || (direction < 0f && _localRotation > -_rotationTreshhold);

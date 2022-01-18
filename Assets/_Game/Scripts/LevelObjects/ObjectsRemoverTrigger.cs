@@ -8,8 +8,20 @@ namespace RoofRace.LevelObjects
 
         private void OnTriggerEnter(Collider other)
         {
+            if (other.CompareTag(Tags.PLAYER))
+                SetActiveObjects(false);
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.CompareTag(Tags.PLAYER))
+                SetActiveObjects(true);
+        }
+
+        private void SetActiveObjects(bool value)
+        {
             foreach (GameObject item in _removable)
-                item.SetActive(false);
+                item.SetActive(value);
         }
     }
 }

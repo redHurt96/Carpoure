@@ -2066,6 +2066,7 @@ MonoBehaviour:
   _origin: {fileID: 2376790052651739241}
   _broken: {fileID: 5193599228376287835}
   _explosionForce: 5
+  _randomInfluence: 1
 --- !u!1 &8428095099706049134
 GameObject:
   m_ObjectHideFlags: 0
