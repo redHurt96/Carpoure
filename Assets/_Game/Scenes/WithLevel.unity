@@ -8184,7 +8184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _carPrefab: {fileID: 7658504756061743118, guid: 75970d47d677d89419160235763f77d2,
     type: 3}
-  _levelPrefab: {fileID: 2083665140075587054, guid: 1e6d1f19661794a49b1b0a9ae76036fa,
+  _levelPrefab: {fileID: 2083665140075587054, guid: ccdb7c885c778564199d504da0915173,
     type: 3}
   _cameraLookPoint: {fileID: 1130461231}
   _levelCamera: {fileID: 222869953}
