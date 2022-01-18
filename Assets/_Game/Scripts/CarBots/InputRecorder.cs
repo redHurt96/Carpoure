@@ -1,26 +1,41 @@
 #if UNITY_EDITOR
 
 using System;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
 namespace RoofRace.CarBots
 {
+    public class CarPath : ScriptableObject
+    {
+        [SerializeField] private Vector3 _startPosition;
+        [SerializeField] private List<CarState> _carStates = new List<CarState>();
+
+        public void Add(Vector3 startPosition) => _startPosition = startPosition;
+        public void Add(CarState state) => _carStates.Add(state);
+
+        public CarState GetByTime(double time)
+        {
+            return null;
+        }
+    }
+
     public class InputRecorder : MonoBehaviour
     {
-        private enum State
+        private enum RecorderState
         {
             None = 0,
             Recorded,
             Saved
         }
 
-        [SerializeField] private MobileInput _input;
+        [SerializeField] private Transform[] _wheels;
 
-        private State _state;
+        private RecorderState _state;
         private DateTime _startTime;
 
-        private CarStatesArray _asset;
+        private CarPath _asset;
 
         private void Awake()
         {
@@ -33,7 +48,7 @@ namespace RoofRace.CarBots
 
         private void FixedUpdate()
         {
-            if (_state == State.Recorded)
+            if (_state == RecorderState.Recorded)
                 RecordCarState();
         }
 
@@ -49,31 +64,49 @@ namespace RoofRace.CarBots
 
         private void CreateAsset()
         {
-            _asset = ScriptableObject.CreateInstance<CarStatesArray>();
-            _asset.StartPosition = transform.position;
+            _asset = ScriptableObject.CreateInstance<CarPath>();
+            _asset.Add(transform.position);
         }
 
         private void StartRecord()
         {
-            _state = State.Recorded;
+            _state = RecorderState.Recorded;
             _startTime = DateTime.Now;
         }
 
-        private void RecordCarState() => 
-            _asset.AddState(_input.HorizontalDirection, DateTime.Now.Subtract(_startTime).TotalMilliseconds);
+        private void RecordCarState()
+        {
+            _asset.Add(new CarState
+            {
+                Time = DateTime.Now.Subtract(_startTime).TotalMilliseconds,
+                Position = transform.position,
+                Rotation = transform.rotation,
+                WheelsRotations = GetWheelsRotations()
+            });
+
+            Quaternion[] GetWheelsRotations()
+            {
+                var rotations = new Quaternion[_wheels.Length];
+
+                for (int i = 0; i < _wheels.Length; i++)
+                    rotations[i] = _wheels[i].rotation;
+
+                return rotations;
+            }
+        }
 
         private void FinishRecord()
         {
-            if (_state == State.Recorded)
+            if (_state == RecorderState.Recorded)
             {
-                _state = State.Saved;
+                _state = RecorderState.Saved;
                 Save();
             }
         }
 
         private void Save()
         {
-            AssetDatabase.CreateAsset(_asset, "Assets/_Game/CarBots/StatesArray.asset");
+            AssetDatabase.CreateAsset(_asset, "Assets/_Game/BotsPaths/StatesArray.asset");
             AssetDatabase.SaveAssets();
         }
     }
