@@ -8,7 +8,7 @@ namespace RoofRace.Bots
 
         [SerializeField] private Vector3 _startPosition;
 
-        private PositionCurve _position = new PositionCurve();
+        [SerializeField] private PositionCurve _position = new PositionCurve();
         private RotationCurve _rotation = new RotationCurve();
 
         private RotationCurve[] _wheelsRotations = new RotationCurve[4]
