@@ -8,7 +8,8 @@ namespace RoofRace.CarBots
     [Serializable]
     public class CarState
     {
-        public double Time;
+        public double StartTime;
+        public double FinishTime;
 
         public Vector3 Position;
         public Quaternion Rotation;
