@@ -2111,7 +2111,7 @@ GameObject:
   - component: {fileID: 7032843658751406796}
   m_Layer: 13
   m_Name: KartBouncingCapsule
-  m_TagString: Player
+  m_TagString: Bot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
