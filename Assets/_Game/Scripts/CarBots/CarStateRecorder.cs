@@ -1,11 +1,12 @@
 #if UNITY_EDITOR
 
+using Sirenix.OdinInspector;
 using System;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-namespace RoofRace.CarBots
+namespace RoofRace.Bots
 {
     public class CarStateRecorder : MonoBehaviour
     {
@@ -62,13 +63,14 @@ namespace RoofRace.CarBots
 
         private void RecordCarState()
         {
-            _asset.Add(new CarState
+            var state = new CarState
             {
-                FinishTime = DateTime.Now.Subtract(_startTime).TotalMilliseconds,
                 Position = transform.position,
                 Rotation = transform.rotation,
-                WheelsRotations = GetWheelsRotations()
-            });
+                WheelsRotations = GetWheelsRotations(),
+            };
+
+            _asset.Add(state, (float)DateTime.Now.Subtract(_startTime).TotalMilliseconds);
 
             Quaternion[] GetWheelsRotations()
             {
@@ -81,6 +83,7 @@ namespace RoofRace.CarBots
             }
         }
 
+        [Button]
         private void FinishRecord()
         {
             if (_state == RecorderState.Recorded)

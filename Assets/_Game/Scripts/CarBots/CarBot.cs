@@ -1,10 +1,8 @@
-﻿#if UNITY_EDITOR
-
-using Sirenix.OdinInspector;
+﻿using Sirenix.OdinInspector;
 using System;
 using UnityEngine;
 
-namespace RoofRace.CarBots
+namespace RoofRace.Bots
 {
     public class CarBot : MonoBehaviour
     {
@@ -14,7 +12,6 @@ namespace RoofRace.CarBots
         private bool _isRunned;
         private DateTime _startTime;
 
-        private CarState _previous;
 
         private void Awake()
         {
@@ -25,6 +22,9 @@ namespace RoofRace.CarBots
 
         private void OnDestroy()
         {
+            if (!LevelStateMachine.IsInstanceExist)
+                return;
+
             LevelStateMachine.Instance.LevelStarted -= StartRide;
             LevelStateMachine.Instance.LevelFinished -= FinishRide;
             LevelStateMachine.Instance.LevelFailed -= FinishRide;
@@ -34,11 +34,19 @@ namespace RoofRace.CarBots
         {
             if (_isRunned)
             {
-                double time = DateTime.Now.Subtract(_startTime).TotalMilliseconds;
+                float time = (float)DateTime.Now.Subtract(_startTime).TotalMilliseconds;
                 CarState state = _path.GetByTime(time);
 
-                ApplyState(state, time);
+                ApplyState(state);
             }
+        }
+
+        private void ApplyState(CarState state)
+        {
+            transform.SetPositionAndRotation(state.Position, state.Rotation);
+
+            for (int i = 0; i < _wheels.Length; i++)
+                _wheels[i].rotation = state.WheelsRotations[i];
         }
 
         private void StartRide()
@@ -52,27 +60,6 @@ namespace RoofRace.CarBots
             _isRunned = false;
         }
 
-        private void ApplyState(CarState state, double time)
-        {
-            if (_previous != null)
-            {
-                float lerpValue = (float)((state.FinishTime - time) / (state.FinishTime - state.StartTime));
-
-                transform.position = Vector3.Lerp(_previous.Position, state.Position, lerpValue);
-                transform.rotation = Quaternion.Lerp(_previous.Rotation, state.Rotation, lerpValue);
-            }
-            else
-            {
-                transform.position = state.Position;
-                transform.rotation = state.Rotation;
-            }
-
-            for (int i = 0; i < _wheels.Length; i++)
-                _wheels[i].rotation = state.WheelsRotations[i];
-
-            _previous = state;
-        }
-
         #region EDITOR TOOLS
 
         [Button]
@@ -81,5 +68,3 @@ namespace RoofRace.CarBots
         #endregion
     }
 }
-
-#endif

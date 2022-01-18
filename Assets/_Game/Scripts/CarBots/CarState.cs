@@ -1,21 +1,14 @@
-﻿#if UNITY_EDITOR
-
-using System;
+﻿using System;
 using UnityEngine;
 
-namespace RoofRace.CarBots
+namespace RoofRace.Bots
 {
     [Serializable]
     public class CarState
     {
-        public double StartTime;
-        public double FinishTime;
-
         public Vector3 Position;
         public Quaternion Rotation;
 
         public Quaternion[] WheelsRotations;
     }
 }
-
-#endif

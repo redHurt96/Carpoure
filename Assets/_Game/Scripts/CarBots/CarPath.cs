@@ -1,10 +1,6 @@
-﻿#if UNITY_EDITOR
+﻿using UnityEngine;
 
-using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
-
-namespace RoofRace.CarBots
+namespace RoofRace.Bots
 {
     public class CarPath : ScriptableObject
     {
@@ -12,20 +8,42 @@ namespace RoofRace.CarBots
 
         [SerializeField] private Vector3 _startPosition;
 
-        [SerializeField] private List<CarState> _carStates = new List<CarState>();
+        private PositionCurve _position = new PositionCurve();
+        private RotationCurve _rotation = new RotationCurve();
+
+        private RotationCurve[] _wheelsRotations = new RotationCurve[4]
+        {
+            new RotationCurve(),
+            new RotationCurve(),
+            new RotationCurve(),
+            new RotationCurve()
+        };
 
         public void Add(Vector3 startPosition) => _startPosition = startPosition;
-        public void Add(CarState state)
-        {
-            if (_carStates.Count > 0)
-                state.StartTime = _carStates.Last().FinishTime;
 
-            _carStates.Add(state);
+        public void Add(CarState state, float atTime)
+        {
+            _position.AddKey(state.Position, atTime);
+            _rotation.AddKey(state.Rotation, atTime);
+
+            for (int i = 0; i < state.WheelsRotations.Length; i++)
+                _wheelsRotations[i].AddKey(state.WheelsRotations[i], atTime);
         }
 
-        public CarState GetByTime(double time) => 
-            _carStates.First(x => x.StartTime <= time && x.FinishTime >= time);
+        public CarState GetByTime(float time)
+        {
+            var state = new CarState
+            {
+                Position = _position.Evaluate(time),
+                Rotation = _rotation.Evaluate(time),
+            };
+
+            state.WheelsRotations = new Quaternion[4];
+
+            for (int i = 0; i < state.WheelsRotations.Length; i++)
+                state.WheelsRotations[i] = _wheelsRotations[i].Evaluate(time);
+
+            return state;
+        }
     }
 }
-
-#endif
