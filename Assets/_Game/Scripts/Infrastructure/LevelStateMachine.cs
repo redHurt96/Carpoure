@@ -70,6 +70,7 @@ namespace RoofRace
 
             _failUi.SetActive(true);
             _speedVfx.SetActive(false);
+            _car.Disable();
 
             GameAnalytics.NewProgressionEvent(GAProgressionStatus.Fail, $"Level{_levelPool.Current}", _level.CalculateProgress(_carPrefab.transform).ToString().Replace(',', '.'));
             CollectablesMaganer.SendEvent();

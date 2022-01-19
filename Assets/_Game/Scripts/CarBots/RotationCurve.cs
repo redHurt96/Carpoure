@@ -21,5 +21,7 @@ namespace RoofRace.Bots
 
         public Quaternion Evaluate(float time) =>
             new Quaternion(X.Evaluate(time), Y.Evaluate(time), Z.Evaluate(time), W.Evaluate(time));
+
+        internal int GetLenght() => Y.length;
     }
 }

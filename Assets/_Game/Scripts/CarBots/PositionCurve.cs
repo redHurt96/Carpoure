@@ -19,5 +19,7 @@ namespace RoofRace.Bots
 
         public Vector3 Evaluate(float time) => 
             new Vector3(X.Evaluate(time), Y.Evaluate(time), Z.Evaluate(time));
+
+        internal int GetLenght() => Z.length;
     }
 }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Sirenix.OdinInspector;
+using UnityEngine;
 
 namespace RoofRace.Bots
 {
@@ -8,10 +9,10 @@ namespace RoofRace.Bots
 
         [SerializeField] private Vector3 _startPosition;
 
-        private PositionCurve _position = new PositionCurve();
-        private RotationCurve _rotation = new RotationCurve();
+        [SerializeField] private PositionCurve _position = new PositionCurve();
+        [SerializeField] private RotationCurve _rotation = new RotationCurve();
 
-        private RotationCurve[] _wheelsRotations = new RotationCurve[4]
+        [SerializeField] private RotationCurve[] _wheelsRotations = new RotationCurve[4]
         {
             new RotationCurve(),
             new RotationCurve(),
@@ -44,6 +45,16 @@ namespace RoofRace.Bots
                 state.WheelsRotations[i] = _wheelsRotations[i].Evaluate(time);
 
             return state;
+        }
+
+        [Button]
+        private void PrintLogs()
+        {
+            Debug.Log($"Position curve lenght = {_position.GetLenght()}");
+            Debug.Log($"Rotation curve lenght = {_position.GetLenght()}");
+
+            for (int i = 0; i < _wheelsRotations.Length; i++)
+                Debug.Log($"Wheel {i} curve lenght = {_wheelsRotations[i].GetLenght()}");
         }
     }
 }
