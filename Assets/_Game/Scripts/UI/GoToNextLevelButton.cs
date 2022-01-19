@@ -4,7 +4,7 @@ namespace RoofRace.UI
 {
     public class GoToNextLevelButton : BaseActionButton
     {
-        protected override void PerformOnClick() =>
+        protected override void PerformOnClick() => 
             LevelStateMachine.Instance.GoToNextLevel();
     }
 }

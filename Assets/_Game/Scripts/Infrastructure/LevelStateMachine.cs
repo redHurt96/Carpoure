@@ -1,4 +1,6 @@
+using GameAnalyticsSDK;
 using RH.Utilities.SingletonAccess;
+using RoofRace.Collectables;
 using RoofRace.Physics;
 using Sirenix.OdinInspector;
 using System;
@@ -42,6 +44,8 @@ namespace RoofRace
             _car.Enable();
             _levelCamera.EnableShaking();
             _speedVfx.SetActive(true);
+
+            GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, 0f.ToString());
         }
 
         internal void FinishLevel()
@@ -53,6 +57,9 @@ namespace RoofRace
             _speedVfx.SetActive(false);
 
             LevelTime.EnableSlowMotion();
+
+            GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, 1f.ToString());
+            CollectablesMaganer.SendEvent();
         }
 
         internal void FailLevel()
@@ -61,6 +68,9 @@ namespace RoofRace
 
             _failUi.SetActive(true);
             _speedVfx.SetActive(false);
+
+            GameAnalytics.NewProgressionEvent(GAProgressionStatus.Fail, _level.CalculateProgress(_carPrefab.transform).ToString().Replace(',', '.'));
+            CollectablesMaganer.SendEvent();
         }
 
         internal void GoToNextLevel()

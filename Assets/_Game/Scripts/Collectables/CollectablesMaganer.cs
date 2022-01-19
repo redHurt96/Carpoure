@@ -1,4 +1,5 @@
-﻿using RH.Utilities.SingletonAccess;
+﻿using GameAnalyticsSDK;
+using RH.Utilities.SingletonAccess;
 using System;
 
 namespace RoofRace.Collectables
@@ -25,10 +26,13 @@ namespace RoofRace.Collectables
         private void Start() =>
             LevelStateMachine.Instance.LevelRestarted += ResetCount;
 
-        private void ResetCount() =>
-            Count = 0;
+        internal static void SendEvent() => 
+            GameAnalytics.NewDesignEvent("Collectables", Instance.Count);
 
         internal void AddItem(CollectableObject collectable) =>
             Count += collectable.Value;
+
+        private void ResetCount() =>
+            Count = 0;
     }
 }
