@@ -1,6 +1,7 @@
 using GameAnalyticsSDK;
 using RH.Utilities.SingletonAccess;
 using RoofRace.Collectables;
+using RoofRace.Infrastructure;
 using RoofRace.Physics;
 using Sirenix.OdinInspector;
 using System;
@@ -16,7 +17,7 @@ namespace RoofRace
         public event Action LevelFailed;
 
         [SerializeField, AssetsOnly] private PlayerCar _carPrefab;
-        [SerializeField, AssetsOnly] private Level _levelPrefab;
+        [SerializeField] private LevelPool _levelPool;
         [SerializeField] private CameraLookPoint _cameraLookPoint;
         [SerializeField] private LevelCamera _levelCamera;
         [SerializeField] private GameObject _speedVfx;
@@ -33,6 +34,7 @@ namespace RoofRace
 
         private void Start()
         {
+            CreateCurrentLevel();
             SwitchToStartState();
         }
 
@@ -45,7 +47,7 @@ namespace RoofRace
             _levelCamera.EnableShaking();
             _speedVfx.SetActive(true);
 
-            GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, 0f.ToString());
+            GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, $"Level{_levelPool.Current}", 0f.ToString());
         }
 
         internal void FinishLevel()
@@ -58,7 +60,7 @@ namespace RoofRace
 
             LevelTime.EnableSlowMotion();
 
-            GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, 1f.ToString());
+            GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, $"Level{_levelPool.Current}", 1f.ToString());
             CollectablesMaganer.SendEvent();
         }
 
@@ -69,24 +71,25 @@ namespace RoofRace
             _failUi.SetActive(true);
             _speedVfx.SetActive(false);
 
-            GameAnalytics.NewProgressionEvent(GAProgressionStatus.Fail, _level.CalculateProgress(_carPrefab.transform).ToString().Replace(',', '.'));
+            GameAnalytics.NewProgressionEvent(GAProgressionStatus.Fail, $"Level{_levelPool.Current}", _level.CalculateProgress(_carPrefab.transform).ToString().Replace(',', '.'));
             CollectablesMaganer.SendEvent();
         }
 
         internal void GoToNextLevel()
         {
+            CreateNextLevel();
             SwitchToStartState();
         }
 
         internal void RestartLevel()
         {
             LevelRestarted?.Invoke();
+            CreateCurrentLevel();
             SwitchToStartState();
         }
 
         private void SwitchToStartState()
         {
-            CreateLevel();
             CreateCar();
 
             _cameraLookPoint.AttachTarget(_car.transform);
@@ -100,7 +103,8 @@ namespace RoofRace
             LevelTime.ResetToDefault();
         }
 
-        private void CreateLevel() => Create(_levelPrefab, ref _level, Vector3.zero);
+        private void CreateCurrentLevel() => Create(_levelPool.GetCurrent(), ref _level, Vector3.zero);
+        private void CreateNextLevel() => Create(_levelPool.GetNext(), ref _level, Vector3.zero);
         private void CreateCar() => Create(_carPrefab, ref _car, _startPoint);
 
         private void Create<T>(T prefab, ref T container, Vector3 atPosition) where T : Component

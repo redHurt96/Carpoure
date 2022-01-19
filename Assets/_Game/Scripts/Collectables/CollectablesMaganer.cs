@@ -32,7 +32,6 @@ namespace RoofRace.Collectables
         internal void AddItem(CollectableObject collectable) =>
             Count += collectable.Value;
 
-        private void ResetCount() =>
-            Count = 0;
+        private void ResetCount() => Count = 0;
     }
 }
