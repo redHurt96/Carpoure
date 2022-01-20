@@ -138,6 +138,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[Graphy]'
       objectReference: {fileID: 0}
+    - target: {fileID: 177638, guid: 0abab5bb77339e4428787a870eb31bd3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 11496292, guid: 0abab5bb77339e4428787a870eb31bd3, type: 3}
       propertyPath: m_audioModuleState
       value: 4
@@ -156,7 +160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22451668, guid: 0abab5bb77339e4428787a870eb31bd3, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22451668, guid: 0abab5bb77339e4428787a870eb31bd3, type: 3}
       propertyPath: m_AnchorMax.x
@@ -973,7 +977,7 @@ PrefabInstance:
     - target: {fileID: 578153680477369604, guid: 71d476f50150b604eaff119fed2d6b46,
         type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 578153680477369604, guid: 71d476f50150b604eaff119fed2d6b46,
         type: 3}
@@ -1978,7 +1982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 465288, guid: a9d27d37bab3c447b8eb7a2a6756e952, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 465288, guid: a9d27d37bab3c447b8eb7a2a6756e952, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8445,7 +8449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e6ca9b3fa521144994f35c367d19248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _carPrefab: {fileID: 7658504756061743118, guid: 75970d47d677d89419160235763f77d2,
+  _carPrefab: {fileID: 7658504756061743118, guid: 1c1130ff19da094448305ace3853b960,
     type: 3}
   _levelPool: {fileID: 404452302}
   _cameraLookPoint: {fileID: 1130461231}
@@ -8483,7 +8487,7 @@ PrefabInstance:
     - target: {fileID: 3160360407540852951, guid: b7978dd8d8633164084811f6b0867137,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3160360407540852951, guid: b7978dd8d8633164084811f6b0867137,
         type: 3}
@@ -8548,9 +8552,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: LunarConsole Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 183544, guid: 6d0acc00cc82d436b9d11446d2ddfef6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 406632, guid: 6d0acc00cc82d436b9d11446d2ddfef6, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 406632, guid: 6d0acc00cc82d436b9d11446d2ddfef6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8647,7 +8655,7 @@ PrefabInstance:
     - target: {fileID: 7481604593074921424, guid: 7b2d374d9740ce04bab9a11e1f1bb73f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7481604593074921424, guid: 7b2d374d9740ce04bab9a11e1f1bb73f,
         type: 3}
