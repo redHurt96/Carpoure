@@ -2087,6 +2087,7 @@ GameObject:
   - component: {fileID: 1471027981}
   - component: {fileID: 7658504756061743118}
   - component: {fileID: 2277426541729077867}
+  - component: {fileID: 3729460261399322460}
   m_Layer: 2
   m_Name: PlayerCarKeyboard
   m_TagString: Player
@@ -2278,6 +2279,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotationTreshhold: 0.2
+--- !u!114 &3729460261399322460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7032843658353191263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52bd9f0f7c39ae44d8dfcb4a9231b1e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _powerup:
+    modifiers:
+      TopSpeed: 10
+      Acceleration: 10
+      ReverseSpeed: 0
+      ReverseAcceleration: 0
+      AccelerationCurve: 1
+      Braking: 0
+      CoastingDrag: 0
+      Grip: 0
+      Steer: 0
+      AddedGravity: {x: 0, y: 0, z: 0}
+    PowerUpID: 
+    ElapsedTime: 0
+    MaxTime: 0
 --- !u!1 &7032843658422184209
 GameObject:
   m_ObjectHideFlags: 0
