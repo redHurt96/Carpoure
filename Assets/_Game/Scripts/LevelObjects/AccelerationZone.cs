@@ -1,4 +1,5 @@
 using KartGame.KartSystems;
+using RoofRace.Logic;
 using UnityEngine;
 
 namespace RoofRace.LevelObjects
@@ -10,7 +11,7 @@ namespace RoofRace.LevelObjects
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.TryGetComponent<CarCollider>(out var carCollider))
+            if (other.TryGetComponent<CarCollider>(out var carCollider) && !NitroManager.Instance.IsEnabled)
                 carCollider.Kart.AddPowerup(_powerup);
         }
     }

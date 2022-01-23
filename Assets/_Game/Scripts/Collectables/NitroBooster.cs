@@ -17,8 +17,11 @@ namespace RoofRace.Car
             NitroManager.Instance.Enabled += EnableNitro;
         }
 
-        private void OnDestroy() => 
-            NitroManager.Instance.Enabled += EnableNitro;
+        private void OnDestroy()
+        {
+            if (NitroManager.IsInstanceExist)
+                NitroManager.Instance.Enabled -= EnableNitro;
+        }
 
         private void EnableNitro()
         {
